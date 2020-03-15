@@ -64,13 +64,13 @@
 .left {
     height: 100vh;
     flex-direction: column;
-    width: 33vw;
+    width: 32vw;
 }
 .middle {
-    width: 33vw;
+    width: 36vw;
 }
 .right {
-    width: 33vw;
+    width: 32vw;
 }
 .background-green-shadow {
     padding: 10px;
@@ -90,9 +90,25 @@
 }
 
 .label-bg {
-    background: url("labelbg.png") no-repeat;
-    width: 8vw;
-    height: 25vh;
-    background-size: 100% 100%;
+    width: 2vw;
+    height: 16vh;
+    background-image: linear-gradient(180deg, rgba(153,53,91,1) 0%,rgba(197,146,63,1) 100%);
+    border-radius: 5em;
+    box-shadow: 0 0 10px 5px rgba(197,146,63,0.5) ;
     color: #fff;
+    writing-mode: vertical-lr;
+    text-align: center;
+    margin-bottom: 8vh;
+}
+
+.btn {
+    width: 7vw;
+    height: 7vw;
+    background: url("button.png");
+    background-size: 100% 100%;
+    border: none;
+}
+
+.btn:focus{
+    outline: none;
 }
