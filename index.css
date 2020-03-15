@@ -47,7 +47,8 @@
     width: 20vw;
     height: 20vh;
     margin-left: 13vw;
-    margin-top: 2vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
 }
 .proposal {
     width: 15vw;
@@ -131,17 +132,29 @@
     outline: none;
 }
 
-table {
+.table-div {
     background-color: rgba(245, 245, 245, 0.75);
+    padding: 5px;
     margin: 8px;
+}
+
+table {
+    border-collapse:collapse;
 }
 .table-title {
     color: #196b5c;
+    font-size: 12px;
+    transform: scale(0.8);
+    border-bottom: 1px solid #196b5c;
 }
 tr td {
     font-size: 12px;
+    transform: scale(0.6);
     text-align: center;
-    padding: 5px;
+    padding: 2px 5px;
+}
+tr:last-child td {
+    border-bottom: 1px solid #000;
 }
 .card-R {
     width: 35vw;
