@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>middle</title>
+        <link rel="stylesheet" type="text/css" href="index.css" />
+        <style>
+            body {
+                margin: 0;
+                width: 100vw;
+                height: 100vh;
+                background: url("backgroundM.jpg") no-repeat;
+                background-size:100% 100%;
+            }
+            .card {
+                width: 25vw;
+                border: 1px solid white;
+                border-left-style: none;
+                margin-left: 0;
+            }
+            .image {
+                margin-left: 1vw;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="containM">
+            <div class="left">
+                <div class="title title-L">能源站规划</div>
+                <div class="card">
+                    <div class="text">
+                        <img src="3.png" class="image" /><br />
+                    </div>
+                </div>
+                <div class="card">
+
+                </div>
+                <div class="card">
+
+                </div>
+                <div class="card">
+
+                </div>
+                <div class="card">
+                    <div id="proposal1" class="proposalChart"></div>
+                    <div id="proposal2" class="proposalChart"></div>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="title title-M">模拟运行仿真</div>
+                <div class="background-green-shadow">
+                    <div class="background-green">中央创新区</div>
+                </div>
+                <div class="label-bg">
+                    项目信息</div>
+            </div>
+            <div class="right">
+                <div class="title title-R">金鹰世界</div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="echarts.min.js"></script>
+    <script type="text/javascript" src="echarts-gl.js"></script>
+    <script type="text/javascript">
+var titleStyle = {
+            fontSize: 6,
+            fontWeight: 400,
+            color: 'rgba(0,0,0,0.65)'
+        }
+        var seriesStyle = {
+            color: new echarts.graphic.LinearGradient(
+                0, 0, 0, 1,
+                [
+                    {offset: 0, color: '#2AD991'},
+                    {offset: 1, color: '#00C3B5'}
+                ]
+            )
+        }
+        var option = {
+            title: {
+                text: '',
+                left: 'center',
+                textStyle: titleStyle
+            },
+            xAxis: {
+                data: ["方案一","方案二","方案三" ],
+                axisLabel: {
+                    textStyle: {
+                        color: 'rgba(0,0,0,0.65)',
+                        fontSize: 5,
+                    }
+                },
+                axisTick: {
+                    show: false
+                },
+                axisLine: {
+                    show: false
+                },
+                z: 10
+            },
+            yAxis: {
+                axisLine: {
+                    show: false
+                },
+                axisTick: {
+                    show: false,
+                },
+                axisLabel: {
+                    textStyle: {
+                        color: '#999',
+                        fontSize: 5
+                    }
+                },
+                offset: -5,
+                splitLine: {
+                    lineStyle: {
+                        type: 'dotted'
+                    }
+                }
+            }
+        };
+
+        var proposal1 = echarts.init(document.getElementById("proposal1"));
+        var option1 = option;
+        option1.title.text = "投资回收期/年";
+        option1.series = [
+                {
+                    type: 'bar',
+                    itemStyle: seriesStyle,
+                    label: {
+                        show: true,
+                        fontSize: 5,
+                        position: 'top',
+                    },
+                    barWidth : 25,
+                    data: [5.71,3.42,8.89]
+                }
+            ];
+
+        proposal1.setOption(option1);
+
+        var proposal2 = echarts.init(document.getElementById("proposal2"));
+        var option2 = option;
+        option2.title.text = "能效比";
+        option1.series = [
+                {
+                    type: 'bar',
+                    itemStyle: seriesStyle,
+                    label: {
+                        show: true,
+                        fontSize: 5,
+                        position: 'top',
+                    },
+                    barWidth : 25,
+                    data: [0.6223,0.6523,0.7023]
+                }
+            ];
+
+        proposal2.setOption(option2);
+    </script>
+</html>

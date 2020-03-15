@@ -1,0 +1,159 @@
+<svg width="465" height="260" xmlns="http://www.w3.org/2000/svg" class="st18">
+ <style type="text/css">
+  <![CDATA[
+		.st1 {marker-start:url(#mrkr1-6);stroke:#9900cc;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.25}
+		.st2 {fill:#9900cc;fill-opacity:1;stroke:#9900cc;stroke-opacity:1;stroke-width:0.47169811320755}
+		.st3 {fill:none;stroke:none;stroke-width:0.25}
+		.st4 {fill:#000000;font-family:黑体;font-size:1.16666em}
+		.st5 {marker-start:url(#mrkr1-18);stroke:#ffc000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.25}
+		.st6 {fill:#ffc000;fill-opacity:1;stroke:#ffc000;stroke-opacity:1;stroke-width:0.47169811320755}
+		.st7 {visibility:visible}
+		.st8 {fill:none;filter:url(#filter_2);stroke:#5b9bd5;stroke-opacity:0.22}
+		.st9 {fill:#5b9bd5;filter:url(#filter_2);font-family:黑体;font-size:1.33333em;opacity:0.219608}
+		.st10 {fill:none;stroke:#000000;stroke-width:1}
+		.st11 {fill:#000000;font-family:黑体;font-size:1.33333em}
+		.st12 {marker-start:url(#mrkr1-41);stroke:#ff0000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.25}
+		.st13 {fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.47169811320755}
+		.st14 {marker-start:url(#mrkr1-52);stroke:#5b9bd5;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.25}
+		.st15 {fill:#5b9bd5;fill-opacity:1;stroke:#5b9bd5;stroke-opacity:1;stroke-width:0.47169811320755}
+		.st16 {marker-end:url(#mrkr1-94);stroke:#ff0000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.25}
+		.st17 {fill:#000000;font-family:Calibri;font-size:1.16666em}
+		.st18 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+ </style>
+ <defs>
+  <g id="lend1">
+   <path id="svg_1" stroke-linecap="round" stroke-linejoin="round" fill="none" d="m1,-1l-1,1l1,1"/>
+  </g>
+ </defs>
+
+ <g>
+  <title>页-1</title>
+  <g transform="rotate(180 124.85299682617188,527.5449829101562) " id="shape4-1">
+   <title transform="translate(124.85299682617188,527.5449829101562) ">工作表.4</title>
+   <path id="svg_7" class="st1" d="m124.852997,842.664983l90.77,0"/>
+  </g>
+  <g id="shape7-7">
+   <title transform="translate(24.162200927734375,-105.53299713134766) ">工作表.7</title>
+   <desc transform="translate(24.162200927734375,-105.53299713134766) ">市政燃气</desc>
+   <rect id="svg_8" class="st3" height="18.4252" width="70.8661" y="191.164003" x="24.162201"/>
+   <text id="svg_9" class="st4" y="205.037003" x="31.592201">市政燃气</text>
+  </g>
+  <g id="shape11-10">
+   <title transform="translate(27.815399169921875,-219.68499755859375) ">工作表.11</title>
+   <desc transform="translate(27.815399169921875,-219.68499755859375) ">市政电网</desc>
+   <rect id="svg_10" class="st3" height="18.4252" width="70.8661" y="77.012002" x="27.815399"/>
+   <text id="svg_11" class="st4" y="90.885002" x="35.245399">市政电网</text>
+  </g>
+  <g transform="rotate(90 458.6709899902344,36.67520141601566) " id="shape22-13">
+   <title transform="translate(458.6709899902344,36.675201416015625) ">工作表.22</title>
+   <path id="svg_12" class="st5" d="m458.67099,351.795201l111.97,0"/>
+  </g>
+  <g id="shape27-19">
+   <title transform="translate(114.90799713134766,-278.4469909667969) ">工作表.27</title>
+   <desc transform="translate(114.90799713134766,-278.4469909667969) ">供电</desc>
+   <rect id="svg_13" class="st3" height="18.4252" width="56.6929" y="18.250009" x="114.907997"/>
+   <text id="svg_14" class="st4" y="32.123009" x="129.257997">供电</text>
+  </g>
+  <g id="shape28-22">
+   <title transform="translate(222.16400146484375,-165.7689971923828) ">工作表.28</title>
+   <desc transform="translate(222.16400146484375,-165.7689971923828) ">供热</desc>
+   <rect id="svg_15" class="st3" height="18.4252" width="56.6929" y="130.928003" x="222.164001"/>
+   <text id="svg_16" class="st4" y="144.801003" x="236.514001">供热</text>
+  </g>
+  <g id="shape29-25">
+   <title transform="translate(392.2430114746094,-272.0270080566406) ">工作表.29</title>
+   <desc transform="translate(392.2430114746094,-272.0270080566406) ">供冷</desc>
+   <rect id="svg_17" class="st3" height="18.4252" width="56.6929" y="24.669992" x="392.243011"/>
+   <text id="svg_18" class="st4" y="38.542992" x="406.593011">供冷</text>
+  </g>
+  <g id="shape46-28">
+   <title transform="translate(124.85299682617188,-88.52529907226562) ">矩形.46</title>
+   <desc transform="translate(124.85299682617188,-88.52529907226562) ">燃气锅炉</desc>
+   <g class="st7" transform="matrix(1,0,0,1,0.345598,1.97279) " id="shadow46-29">
+    <rect id="svg_19" class="st8" height="28.3465" width="76.6436" y="198.249701" x="124.852997"/>
+    <text id="svg_20" class="st9" y="217.224701" x="131.172997">燃气锅炉</text>
+   </g>
+   <rect id="svg_21" class="st10" height="28.3465" width="76.6436" y="198.249701" x="124.852997"/>
+   <text id="svg_22" class="st11" y="217.224701" x="131.172997">燃气锅炉</text>
+  </g>
+  <g transform="rotate(90 565.6320190429689,154.31300354003912) " id="shape48-36">
+   <title transform="translate(565.6320190429688,154.31300354003906) ">工作表.48</title>
+   <path id="svg_23" class="st12" d="m565.632019,469.433004l89.94,0"/>
+  </g>
+  <g transform="rotate(180 143.63299560546875,401.7510070800781) " id="shape55-42">
+   <title transform="translate(143.63299560546875,401.7510070800781) ">工作表.55</title>
+   <path id="svg_24" class="st5" d="m143.632996,716.871007l44.76,0"/>
+  </g>
+  <g transform="rotate(90 735.06298828125,43.095199584961) " id="shape56-47">
+   <title transform="translate(735.06298828125,43.09519958496094) ">工作表.56</title>
+   <path id="svg_25" class="st14" d="m735.062988,358.2152l94.86,0"/>
+  </g>
+  <g id="shape65-53">
+   <title transform="translate(226.41600036621094,-237.343994140625) ">矩形.65</title>
+   <desc transform="translate(226.41600036621094,-237.343994140625) ">离心式冷水机组</desc>
+   <g class="st7" transform="matrix(1,0,0,1,0.345598,1.97279) " id="shadow65-54">
+    <rect id="svg_26" class="st8" height="28.3465" width="123.307" y="49.431006" x="226.416"/>
+    <text id="svg_27" class="st9" y="68.406006" x="232.066">离心式冷水机组</text>
+   </g>
+   <rect id="svg_28" class="st10" height="28.3465" width="123.307" y="49.431006" x="226.416"/>
+   <text id="svg_29" class="st11" y="68.406006" x="232.066">离心式冷水机组</text>
+  </g>
+  <g transform="rotate(180 419.9410095214844,378.72601318359375) " id="shape66-61">
+   <title transform="translate(419.9410095214844,378.72601318359375) ">工作表.66</title>
+   <path id="svg_30" class="st14" d="m419.94101,693.846013l70.22,0"/>
+  </g>
+  <g transform="rotate(180 226.41600036621094,378.72601318359375) " id="shape67-66">
+   <title transform="translate(226.41600036621094,378.72601318359375) ">工作表.67</title>
+   <path id="svg_31" class="st5" d="m226.416,693.846013l81.27,0"/>
+  </g>
+  <g transform="rotate(180 249.16000366210938,527.5449829101562) " id="shape72-71">
+   <title transform="translate(249.16000366210938,527.5449829101562) ">工作表.72</title>
+   <path id="svg_32" class="st12" d="m249.160004,842.664983l47.66,0"/>
+  </g>
+  <g id="shape76-76">
+   <title transform="translate(174.86399841308594,-196.5959930419922) ">矩形.76</title>
+   <desc transform="translate(174.86399841308594,-196.5959930419922) ">中央空调</desc>
+   <g class="st7" transform="matrix(1,0,0,1,0.345598,1.97279) " id="shadow76-77">
+    <rect id="svg_33" class="st8" height="28.3465" width="94.5995" y="90.179007" x="174.863998"/>
+    <text id="svg_34" class="st9" y="109.154007" x="190.163998">中央空调</text>
+   </g>
+   <rect id="svg_35" class="st10" height="28.3465" width="94.5995" y="90.179007" x="174.863998"/>
+   <text id="svg_36" class="st11" y="109.154007" x="190.163998">中央空调</text>
+  </g>
+  <g transform="rotate(180 174.86399841308594,419.4739990234375) " id="shape77-84">
+   <title transform="translate(174.86399841308594,419.4739990234375) ">工作表.77</title>
+   <path id="svg_37" class="st5" d="m174.863998,734.593999l31.57,0"/>
+  </g>
+  <g id="shape78-89">
+   <title transform="translate(222.16400146484375,-196.5959930419922) ">动态连接线</title>
+   <path id="svg_38" class="st16" d="m222.164001,118.524007l0,65.55l25.51,0"/>
+  </g>
+  <g transform="rotate(180 418.8169860839844,419.4739990234375) " id="shape79-95">
+   <title transform="translate(418.8169860839844,419.4739990234375) ">工作表.79</title>
+   <path id="svg_39" class="st14" d="m418.816986,734.593999l149.35,0"/>
+  </g>
+  <g id="shape80-100">
+   <title transform="translate(127.55899810791016,-62.36220169067383) ">工作表.80</title>
+   <desc transform="translate(127.55899810791016,-62.36220169067383) ">3400kW</desc>
+   <rect id="svg_40" class="st3" height="22.6772" width="77.9528" y="230.082798" x="127.558998"/>
+   <text id="svg_41" class="st17" y="245.617798" x="142.938998">3400kW</text>
+  </g>
+  <g id="shape81-103">
+   <title transform="translate(151.29800415039062,-170.07899475097656) ">工作表.81</title>
+   <desc transform="translate(151.29800415039062,-170.07899475097656) ">4000kW</desc>
+   <rect id="svg_42" class="st3" height="21.2598" width="70.8661" y="123.783005" x="151.298004"/>
+   <text id="svg_43" class="st17" y="138.611005" x="163.128004">4000kW</text>
+  </g>
+  <g id="shape83-106">
+   <title transform="translate(246.61399841308594,-265.6910095214844) ">工作表.83</title>
+   <desc transform="translate(246.61399841308594,-265.6910095214844) ">1600kW</desc>
+   <rect id="svg_44" class="st3" height="17.7739" width="93.5433" y="31.65699" x="246.613998"/>
+   <text id="svg_45" class="st17" y="44.74899" x="269.783998">1600kW</text>
+  </g>
+ </g>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="262" width="467" y="-1" x="-1"/>
+ </g>
+</svg>
