@@ -56,6 +56,13 @@
     background-color: white;
 }
 
+.proposalChart2 {
+    width: 20vw;
+    height: 25vh;
+    margin: 10px;
+    background-color: white;
+}
+
 .containM {
     display: flex;
     flex-direction: row;
