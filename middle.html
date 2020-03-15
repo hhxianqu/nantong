@@ -50,15 +50,17 @@
             <div class="background-green-shadow">
                 <div class="background-green">中央创新区</div>
             </div>
-            
+
             <button class="btn"></button>
         </div>
         <div class="right">
             <div class="title title-R">金鹰世界</div>
             <div class="card">
-                <img src="4.png" class="image"/>
+                <img src="4.png" class="image" />
             </div>
-            <div class="card"></div>
+            <div class="card">
+                <div id="jyzl" class="proposalChart2"></div>
+            </div>
             <div class="card"></div>
         </div>
     </div>
@@ -372,46 +374,46 @@
     option_kc3_r.color.push()
     option_kc3_r.xAxis.data = kc3_r_json.time;
     option_kc3_r.legend = {
-            data: ['市政蒸汽', '燃气锅炉', '热泵热出力', '电锅炉蓄热', '电锅炉放热'],
-            bottom: 2,
-            itemHeight: 2,
-            itemGap: 3,
-            textStyle: {
-                fontSize: 2,
-            }
-    },
-    option_kc3_r.series = [
-        {
-            name: '市政蒸汽',
-            type: 'bar',
-            stack: '热相关',
-            data: kc3_r_json.zhengqi
-        },
-        {
-            name: '燃气锅炉',
-            type: 'bar',
-            stack: '热相关',
-            data: kc3_r_json.guolu
-        },
-        {
-            name: '热泵热出力',
-            type: 'bar',
-            stack: '热相关',
-            data: kc3_r_json.bang
-        },
-        {
-            name: '电锅炉蓄热',
-            type: 'bar',
-            stack: '热相关',
-            data: kc3_r_json.xure
-        },
-        {
-            name: '电锅炉放热',
-            type: 'bar',
-            stack: '热相关',
-            data: kc3_r_json.fangre
+        data: ['市政蒸汽', '燃气锅炉', '热泵热出力', '电锅炉蓄热', '电锅炉放热'],
+        bottom: 2,
+        itemHeight: 2,
+        itemGap: 3,
+        textStyle: {
+            fontSize: 2,
         }
-    ]
+    },
+        option_kc3_r.series = [
+            {
+                name: '市政蒸汽',
+                type: 'bar',
+                stack: '热相关',
+                data: kc3_r_json.zhengqi
+            },
+            {
+                name: '燃气锅炉',
+                type: 'bar',
+                stack: '热相关',
+                data: kc3_r_json.guolu
+            },
+            {
+                name: '热泵热出力',
+                type: 'bar',
+                stack: '热相关',
+                data: kc3_r_json.bang
+            },
+            {
+                name: '电锅炉蓄热',
+                type: 'bar',
+                stack: '热相关',
+                data: kc3_r_json.xure
+            },
+            {
+                name: '电锅炉放热',
+                type: 'bar',
+                stack: '热相关',
+                data: kc3_r_json.fangre
+            }
+        ]
     kc3_r.setOption(option_kc3_r);
 
     let kc3_l_json = JSON.parse('{"name": "kc3_l", "time": [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0, 17.0, 18.0, 19.0, 20.0, 21.0, 22.0, 23.0, 24.0], "jizu": [1.66, 1.77, 1.99, 2.21, 2.66, 4.43, 6.64, 10.62, 13.0, 13.0, 13.0, 13.0, 13.0, 13.0, 13.0, 13.0, 13.0, 12.84, 11.06, 7.6, 5.91, 4.47, 3.76, 0.0], "bang": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.4, 1.8, 1.8, 1.8, 1.8, 1.8, 1.8, 1.8, 1.8, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "fangleng": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.45, 2.0, 2.15, 2.82, 2.59, 1.89, 1.19, 0.26, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.33], "xuleng": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -3.64, -4.83, -0.05, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -0.01, -0.01, -0.01, -0.01, -0.01, 0.0, 0.0], "fuhe": [1.66, 1.77, 1.99, 2.21, 2.66, 4.43, 6.64, 10.62, 14.4, 16.17, 16.7, 16.84, 17.48, 17.26, 16.6, 15.93, 15.05, 12.84, 11.06, 7.6, 5.91, 4.47, 3.76, 2.21]}');
@@ -420,41 +422,114 @@
     option_kc3_l.title.text = "方案三冷相关";
     option_kc3_l.xAxis.data = kc3_l_json.time;
     option_kc3_l.legend = {
-            data: ['冷水机组', '冷泵冷出力', '水蓄冷放冷', '水蓄冷蓄冷'],
-            bottom: 2,
-            itemHeight: 2,
-            itemGap: 3,
-            textStyle: {
-                fontSize: 2,
-            }
-    },
-    option_kc3_l.series = [
-        {
-            name: '冷水机组',
-            type: 'bar',
-            stack: '冷相关',
-            data: kc3_l_json.jizu
-        },
-        {
-            name: '冷泵冷出力',
-            type: 'bar',
-            stack: '冷相关',
-            data: kc3_l_json.bang
-        },
-        {
-            name: '水蓄冷放冷',
-            type: 'bar',
-            stack: '冷相关',
-            data: kc3_l_json.fangleng
-        },
-        {
-            name: '水蓄冷蓄冷',
-            type: 'bar',
-            stack: '冷相关',
-            data: kc3_l_json.xuleng
+        data: ['冷水机组', '冷泵冷出力', '水蓄冷放冷', '水蓄冷蓄冷'],
+        bottom: 2,
+        itemHeight: 2,
+        itemGap: 3,
+        textStyle: {
+            fontSize: 2,
         }
-    ]
+    },
+        option_kc3_l.series = [
+            {
+                name: '冷水机组',
+                type: 'bar',
+                stack: '冷相关',
+                data: kc3_l_json.jizu
+            },
+            {
+                name: '冷泵冷出力',
+                type: 'bar',
+                stack: '冷相关',
+                data: kc3_l_json.bang
+            },
+            {
+                name: '水蓄冷放冷',
+                type: 'bar',
+                stack: '冷相关',
+                data: kc3_l_json.fangleng
+            },
+            {
+                name: '水蓄冷蓄冷',
+                type: 'bar',
+                stack: '冷相关',
+                data: kc3_l_json.xuleng
+            }
+        ]
     kc3_l.setOption(option_kc3_l);
+
+    let jyzl_json = JSON.parse('{"name": "jyzl", "time": [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0, 17.0, 18.0, 19.0, 20.0, 21.0, 22.0, 23.0, 24.0], "fuhe": [5.0, 5.0, 6.0, 6.01, 6.3, 8.21, 10.01, 22.11, 28.4, 38.23, 40.32, 41.81, 45.21, 45.53, 48.42, 47.84, 41.53, 36.63, 28.91, 23.12, 20.6, 8.71, 4.0, 4.0]}');
+    var jyzl = echarts.init(document.getElementById("jyzl"));
+    var option_jyzl = {
+        title: {
+            text: '金鹰制冷',
+            left: 'center',
+            textStyle: {
+                fontSize: 10,
+                fontWeight: '10%',
+                color: 'rgba(0,0,0,0.65)'
+            }
+        },
+        color: ['#A5A5A5'],
+        legend: {
+            data: ['负荷'],
+            bottom: 5,
+            itemHeight: 10,
+            textStyle: {
+                fontSize: 10,
+            }
+        },
+        grid: {
+            top: '15%',
+            bottom: '20%',
+        },
+        xAxis: {
+            type: 'category',
+            data: jyzl_json.time,
+            axisLabel: {
+                textStyle: {
+                    color: 'rgba(0,0,0,0.65)',
+                    fontSize: 10,
+                }
+            },
+            axisTick: {
+                show: false
+            },
+            axisLine: {
+                show: false
+            },
+            offset: -5
+        },
+        yAxis: {
+            axisLine: {
+                show: false
+            },
+            axisTick: {
+                show: false,
+            },
+            axisLabel: {
+                textStyle: {
+                    color: '#999',
+                    fontSize: 10
+                }
+            },
+            offset: -5,
+            splitLine: {
+                lineStyle: {
+                    type: 'dotted'
+                }
+            }
+        },
+        series: [
+            {
+                name: '负荷',
+                type: 'bar',
+                stack: '负荷',
+                data: jyzl_json.fuhe
+            }
+        ]
+    }
+    jyzl.setOption(option_jyzl);
 </script>
 
 </html>
