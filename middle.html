@@ -13,7 +13,7 @@
             background-size: 100% 100%;
         }
 
-        .card {
+        .card-L {
             width: 25vw;
             border: 1px solid white;
             border-left-style: none;
@@ -30,24 +30,24 @@
     <div class="containM">
         <div class="left">
             <div class="title title-L">能源站规划</div>
-            <div class="card">
+            <div class="card card-L">
                 <div class="text">
                     <img src="3.png" class="image" /><br />
                 </div>
             </div>
-            <div class="card">
+            <div class="card card-L">
                 <div id="kc1_r" class="proposalChart"></div>
                 <div id="kc1_l" class="proposalChart"></div>
             </div>
-            <div class="card">
+            <div class="card card-L">
                 <div id="kc2_r" class="proposalChart"></div>
                 <div id="kc2_l" class="proposalChart"></div>
             </div>
-            <div class="card">
+            <div class="card card-L">
                 <div id="kc3_r" class="proposalChart"></div>
                 <div id="kc3_l" class="proposalChart"></div>
             </div>
-            <div class="card">
+            <div class="card card-L">
                 <div id="proposal1" class="proposalChart"></div>
                 <div id="proposal2" class="proposalChart"></div>
             </div>
@@ -57,25 +57,16 @@
             <div class="background-green-shadow">
                 <div class="background-green">中央创新区</div>
             </div>
-            <div style="display: flex;flex-direction: row;justify-content: space-between;">
-                <div>
-                    <div class="label-bg">项目信息</div>
-                    <div class="label-bg">规划方案</div>
-                    <div class="label-bg">方案比选</div>
-                </div>
-                <div>
-                    <div class="label-bg">项目信息</div>
-                    <div class="label-bg">负荷信息</div>
-                    <div class="label-bg">规划结果</div>   
-                </div>
-            </div>
-            <div style="text-align: center;">
-                <button class="btn"></button>
-            </div>
-            <canvas id="canvas" class="ctx"></canvas>
+            
+            <button class="btn"></button>
         </div>
         <div class="right">
             <div class="title title-R">金鹰世界</div>
+            <div class="card">
+                <img src="4.png" class="image"/>
+            </div>
+            <div class="card"></div>
+            <div class="card"></div>
         </div>
     </div>
 </body>

@@ -47,7 +47,7 @@
     width: 15vw;
     height: 12vh;
     background-color: white;
-    margin: 8px;
+    margin: 8px 20px;
 }
 .proposalChart {
     width: 15vw;
@@ -107,6 +107,11 @@
     background: url("button.png");
     background-size: 100% 100%;
     border: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
 }
 
 .btn:focus{
