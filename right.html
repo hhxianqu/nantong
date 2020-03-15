@@ -1,98 +1,174 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>right</title>
-        <link rel="stylesheet" type="text/css" href="index.css" />
-        <style>
-            body {
-                margin: 0;
-                width: 100vw;
-                height: 100vh;
-                background: url("backgroundR.jpg") no-repeat;
-                background-size: 100% 100%;
-            }
-            .image {
-                margin-left: 1vw;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="title title-L">能源站规划</div>
-        <div class="card card-R">
-            <img src="6.png" class="image" /><br />
-        </div>
-        <div class="card card-R">
-        </div>
-        <div class="card card-R">
-            <table>
-                <tr>
-                    <th class="table-title">设备名称</th>
-                    <th class="table-title">主要参数</th>
-                    <th class="table-title">总数</th>
-                    <th class="table-title">品牌</th>
-                </tr>
-                <tbody>
-                    <tr>
-                        <td>离心冷水机</td>
-                        <td>制冷量8790kW</td>
-                        <td>4</td>
-                        <td>TRANE、YORK</td>
-                    </tr>
-                    <tr>
-                        <td>离心冷水机</td>
-                        <td>制冷量2286kW</td>
-                        <td>1</td>
-                        <td>TRANE、YORK</td>
-                    </tr>
-                    <tr>
-                        <td>大冷温泵</td>
-                        <td>2500t/h, 22m</td>
-                        <td>3</td>
-                        <td>GRUNDFOS、WILO</td>
-                    </tr>
-                    <tr>
-                        <td>小冷温泵</td>
-                        <td>500t/h, 22m</td>
-                        <td>1</td>
-                        <td>GRUNDFOS、WILO</td>
-                    </tr>
-                    <tr>
-                        <td>大冷却泵</td>
-                        <td>3000t/h, 15m</td>
-                        <td>3</td>
-                        <td>GRUNDFOS、WILO</td>
-                    </tr>
-                    <tr>
-                        <td>小冷却泵</td>
-                        <td>500t/h, 15m</td>
-                        <td>1</td>
-                        <td>GRUNDFOS、WILO</td>
-                    </tr>
-                    <tr>
-                        <td>冷却塔</td>
-                        <td>800t/h</td>
-                        <td>13</td>
-                        <td>DE、BAC</td>
-                    </tr>
-                    <tr>
-                        <td>蒸汽-水板换</td>
-                        <td>换热量6000kW</td>
-                        <td>3</td>
-                        <td>DE、ALFA</td>
-                    </tr>
-                    <tr>
-                        <td>BA</td>
-                        <td></td>
-                        <td>1</td>
-                        <td>DE</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </body>
-    <script type="text/javascript" src="echarts.min.js"></script>
-    <script type="text/javascript" src="echarts-gl.js"></script>
-    <script type="text/javascript">
 
-    </script>
+<head>
+    <title>right</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <style>
+        body {
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+            background: url("backgroundR.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .image {
+            margin-left: 1vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title title-L">能源站规划</div>
+    <div class="card card-R">
+        <img src="6.png" class="image" /><br />
+    </div>
+    <div class="card card-R">
+        <div id="jyzr" class="proposalChart2"></div>
+    </div>
+    <div class="card card-R">
+        <table>
+            <tr>
+                <th class="table-title">设备名称</th>
+                <th class="table-title">主要参数</th>
+                <th class="table-title">总数</th>
+                <th class="table-title">品牌</th>
+            </tr>
+            <tbody>
+                <tr>
+                    <td>离心冷水机</td>
+                    <td>制冷量8790kW</td>
+                    <td>4</td>
+                    <td>TRANE、YORK</td>
+                </tr>
+                <tr>
+                    <td>离心冷水机</td>
+                    <td>制冷量2286kW</td>
+                    <td>1</td>
+                    <td>TRANE、YORK</td>
+                </tr>
+                <tr>
+                    <td>大冷温泵</td>
+                    <td>2500t/h, 22m</td>
+                    <td>3</td>
+                    <td>GRUNDFOS、WILO</td>
+                </tr>
+                <tr>
+                    <td>小冷温泵</td>
+                    <td>500t/h, 22m</td>
+                    <td>1</td>
+                    <td>GRUNDFOS、WILO</td>
+                </tr>
+                <tr>
+                    <td>大冷却泵</td>
+                    <td>3000t/h, 15m</td>
+                    <td>3</td>
+                    <td>GRUNDFOS、WILO</td>
+                </tr>
+                <tr>
+                    <td>小冷却泵</td>
+                    <td>500t/h, 15m</td>
+                    <td>1</td>
+                    <td>GRUNDFOS、WILO</td>
+                </tr>
+                <tr>
+                    <td>冷却塔</td>
+                    <td>800t/h</td>
+                    <td>13</td>
+                    <td>DE、BAC</td>
+                </tr>
+                <tr>
+                    <td>蒸汽-水板换</td>
+                    <td>换热量6000kW</td>
+                    <td>3</td>
+                    <td>DE、ALFA</td>
+                </tr>
+                <tr>
+                    <td>BA</td>
+                    <td></td>
+                    <td>1</td>
+                    <td>DE</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+<script type="text/javascript" src="echarts.min.js"></script>
+<script type="text/javascript" src="echarts-gl.js"></script>
+<script type="text/javascript">
+    let jyzr_json = JSON.parse('{"name": "jyzr", "time": [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0, 17.0, 18.0, 19.0, 20.0, 21.0, 22.0, 23.0, 24.0], "fuhe": [2.72, 2.7, 2.62, 2.62, 2.5, 2.4, 6.14, 18.63, 19.84, 16.35, 10.29, 9.62, 6.33, 7.53, 10.29, 12.05, 13.49, 15.4, 13.88, 12.77, 16.05, 4.73, 2.51, 2.51]}');
+    var jyzr = echarts.init(document.getElementById("jyzr"));
+    var option_jyzr = {
+        title: {
+            text: '金鹰制热',
+            left: 'center',
+            textStyle: {
+                fontSize: 10,
+                fontWeight: '10%',
+                color: 'rgba(0,0,0,0.65)'
+            }
+        },
+        color: ['#A5A5A5'],
+        legend: {
+            data: ['负荷'],
+            bottom: 5,
+            itemHeight: 10,
+            textStyle: {
+                fontSize: 10,
+            }
+        },
+        grid: {
+            top: '15%',
+            bottom: '20%',
+        },
+        xAxis: {
+            type: 'category',
+            data: jyzr_json.time,
+            axisLabel: {
+                textStyle: {
+                    color: 'rgba(0,0,0,0.65)',
+                    fontSize: 10,
+                }
+            },
+            axisTick: {
+                show: false
+            },
+            axisLine: {
+                show: false
+            },
+            offset: -5
+        },
+        yAxis: {
+            axisLine: {
+                show: false
+            },
+            axisTick: {
+                show: false,
+            },
+            axisLabel: {
+                textStyle: {
+                    color: '#999',
+                    fontSize: 10
+                }
+            },
+            offset: -5,
+            splitLine: {
+                lineStyle: {
+                    type: 'dotted'
+                }
+            }
+        },
+        series: [
+            {
+                name: '负荷',
+                type: 'bar',
+                stack: '负荷',
+                data: jyzr_json.fuhe
+            }
+        ]
+    }
+    jyzr.setOption(option_jyzr);
+</script>
+
 </html>

@@ -133,12 +133,13 @@
 
 table {
     background-color: rgba(245, 245, 245, 0.75);
+    margin: 8px;
 }
 .table-title {
     color: #196b5c;
 }
 tr td {
-    font-size: 14px;
+    font-size: 12px;
     text-align: center;
     padding: 5px;
 }
