@@ -31,6 +31,12 @@
     display: flex;
     flex-direction: row;
 }
+.card-L {
+    width: 25vw;
+    border: 1px solid white;
+    border-left-style: none;
+    margin-left: 0;
+}
 .text {
     color: white;
     font-weight: 400;
@@ -116,4 +122,22 @@
 
 .btn:focus{
     outline: none;
+}
+
+table {
+    background-color: rgba(245, 245, 245, 0.75);
+}
+.table-title {
+    color: #196b5c;
+}
+tr td {
+    font-size: 14px;
+    text-align: center;
+    padding: 5px;
+}
+.card-R {
+    width: 35vw;
+    border: 1px solid white;
+    border-left-style: none;
+    margin-left: 0;
 }
