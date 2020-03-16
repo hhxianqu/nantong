@@ -23,7 +23,7 @@
     text-align: center;
 }
 .card {
-    width: 35vw;
+    /* width: 35vw; */
     border: 1px solid white;
     border-right-style: none;
     margin-left: 9.9vw;
@@ -144,4 +144,8 @@ tr:last-child td {
     border: 1px solid white;
     border-left-style: none;
     margin-left: 0;
+}
+
+.text-image {
+    margin-left: 0.8vw;
 }
