@@ -48,13 +48,12 @@
     height: 20vh;
     margin-left: 13vw;
     margin-top: 1vw;
-    margin-bottom: 1vw;
 }
 .proposal {
     width: 15vw;
     height: 12vh;
     background-color: white;
-    margin: 8px 20px;
+    margin: 8px 2vw;
 }
 .proposalChart {
     width: 15vw;
