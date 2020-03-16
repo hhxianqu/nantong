@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SideLeft</title>
+        <link rel="stylesheet" type="text/css" href="side.css" />
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <div class="header"></div>
+        <div>
+            <div class="chart" id="chart1"></div>
+        </div>
+    </body>
+    <script type="text/javascript" src="../index/echarts.min.js"></script>
+    <script type="text/javascript" src="../index/echarts-gl.js"></script>
+    <script type="text/javascript">
+        var titleStyle = {
+            fontSize: 6,
+            fontWeight: 400,
+            color: 'rgba(0,0,0,0.65)'
+        }
+        var seriesStyle = {
+            color: new echarts.graphic.LinearGradient(
+                0, 0, 0, 1,
+                [
+                    { offset: 0, color: '#2AD991' },
+                    { offset: 1, color: '#00C3B5' }
+                ]
+            )
+        }
+        var option = {
+            title: {
+                text: '',
+                left: 'center',
+                textStyle: titleStyle
+            },
+            grid: {
+                top: '20%',
+                bottom: '20%',
+            },
+            xAxis: {
+                data: ["1", "2", "3", "4","5","6"],
+                axisLabel: {
+                    textStyle: {
+                        color: 'rgba(0,0,0,0.65)',
+                        fontSize: 5,
+                    }
+                },
+                axisTick: {
+                    show: false
+                },
+                axisLine: {
+                    show: false
+                },
+                z: 10
+            },
+            yAxis: {
+                axisLine: {
+                    show: false
+                },
+                axisTick: {
+                    show: false,
+                },
+                axisLabel: {
+                    textStyle: {
+                        color: '#999',
+                        fontSize: 5
+                    }
+                },
+                offset: -5,
+                splitLine: {
+                    lineStyle: {
+                        type: 'dotted'
+                    }
+                }
+            }
+        };
+        var chart1 = echarts.init(document.getElementById("chart1"));
+        var option1 = option;
+        option1.title.text = "投资费用/万元";
+        option1.series = [
+            {
+                type: 'bar',
+                itemStyle: seriesStyle,
+                label: {
+                    show: true,
+                    fontSize: 5,
+                    position: 'top',
+                },
+                barWidth: 25,
+                data: [409.38, 280.52, 4054.8,409.38, 280.52, 4054.8]
+            }
+        ];
+
+        chart1.setOption(option1);
+
+    </script>
+</html>
