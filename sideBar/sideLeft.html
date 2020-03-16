@@ -4,20 +4,23 @@
         <title>SideLeft</title>
         <link rel="stylesheet" type="text/css" href="side.css" />
         <style>
-
+            
         </style>
     </head>
     <body>
         <div class="header"></div>
-        <div>
+        <div style="float: right;">
             <div class="chart" id="chart1"></div>
+            <div class="chart" id="chart2"></div>
+            <div class="chart" id="chart3"></div>
+            <div class="chart" id="chart4"></div>
         </div>
     </body>
     <script type="text/javascript" src="../index/echarts.min.js"></script>
     <script type="text/javascript" src="../index/echarts-gl.js"></script>
     <script type="text/javascript">
         var titleStyle = {
-            fontSize: 6,
+            fontSize: 8,
             fontWeight: 400,
             color: 'rgba(0,0,0,0.65)'
         }
@@ -79,7 +82,7 @@
         };
         var chart1 = echarts.init(document.getElementById("chart1"));
         var option1 = option;
-        option1.title.text = "投资费用/万元";
+        option1.title.text = "逐月购能费用/万元";
         option1.series = [
             {
                 type: 'bar',
@@ -90,11 +93,67 @@
                     position: 'top',
                 },
                 barWidth: 25,
-                data: [409.38, 280.52, 4054.8,409.38, 280.52, 4054.8]
+                data: [14651.25,13883.35,14293.75,15694.27,16330.55,17675.75]
             }
         ];
 
         chart1.setOption(option1);
 
+        var chart2 = echarts.init(document.getElementById("chart2"));
+        var option2 = option;
+        option2.title.text = "逐月节省费用/万元";
+        option2.series = [
+            {
+                type: 'bar',
+                itemStyle: seriesStyle,
+                label: {
+                    show: true,
+                    fontSize: 5,
+                    position: 'top',
+                },
+                barWidth: 25,
+                data: [1965.09,1875.25,1925.52,2117.64,2190.09,2377.17]
+            }
+        ];
+
+        chart2.setOption(option2);
+
+        var chart3 = echarts.init(document.getElementById("chart3"));
+        var option3 = option;
+        option3.title.text = "能效性(%)";
+        option3.series = [
+            {
+                type: 'bar',
+                itemStyle: seriesStyle,
+                label: {
+                    show: true,
+                    fontSize: 5,
+                    position: 'top',
+                },
+                barWidth: 25,
+                data: [77.53,78.50,80.18,79.18,80.25,75.28]
+            }
+        ];
+
+        chart3.setOption(option3);
+
+        var chart4 = echarts.init(document.getElementById("chart4"));
+        var option4 = option;
+        option4.title.text = "CO2减排量(t)";
+        option4.series = [
+            {
+                type: 'bar',
+                itemStyle: seriesStyle,
+                label: {
+                    show: true,
+                    fontSize: 5,
+                    position: 'top',
+                },
+                barWidth: 25,
+                data: [5290.91,5315.91,6300.05,6214.07,6542.41,8576.88]
+            }
+        ];
+
+        chart4.setOption(option4);
     </script>
 </html>
