@@ -124,7 +124,9 @@
 table {
     border-collapse:collapse;
     height: 25vh;
+    width: 20vw;
 }
+
 .table-title {
     color: #196b5c;
     font-size: 12px;
