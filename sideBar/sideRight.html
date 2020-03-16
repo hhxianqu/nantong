@@ -1,15 +1,135 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>SideRight</title>
-        <style></style>
-    </head>
-    <body>
 
-    </body>
-    <script type="text/javascript" src="../index/echarts.min.js"></script>
-    <script type="text/javascript" src="../index/echarts-gl.js"></script>
-    <script type="text/javascript">
+<head>
+    <title>SideRight</title>
+    <link rel="stylesheet" type="text/css" href="side.css" />
+    <style>
 
-    </script>
+    </style>
+</head>
+
+<body>
+    <div class="header"></div>
+    <div>
+        <div class="chart" id="op0"></div>
+        <div class="chart" id="op1"></div>
+        <div class="chart" id="op2"></div>
+        <div class="chart" id="op3"></div>
+    </div>
+</body>
+<script type="text/javascript" src="../index/echarts.min.js"></script>
+<script type="text/javascript" src="../index/echarts-gl.js"></script>
+<script type="text/javascript">
+    var titleStyle = {
+        fontSize: 6,
+        fontWeight: 400,
+        color: 'rgba(0,0,0,0.65)'
+    }
+    var seriesStyle = {
+        color: new echarts.graphic.LinearGradient(
+            0, 0, 0, 1,
+            [
+                { offset: 0, color: '#2AD991' },
+                { offset: 1, color: '#00C3B5' }
+            ]
+        )
+    }
+
+    let time = [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0, 17.0, 18.0, 19.0, 20.0, 21.0, 22.0, 23.0, 24.0]
+
+    var option = {
+        title: {
+            text: '',
+            left: 'center',
+            textStyle: titleStyle
+        },
+        grid: {
+            top: '20%',
+            bottom: '20%',
+        },
+        xAxis: {
+            data: time,
+            axisLabel: {
+                textStyle: {
+                    color: 'rgba(0,0,0,0.65)',
+                    fontSize: 5,
+                }
+            },
+            axisTick: {
+                show: false
+            },
+            axisLine: {
+                show: false
+            },
+            z: 10
+        },
+        yAxis: {
+            axisLine: {
+                show: false
+            },
+            axisTick: {
+                show: false,
+            },
+            axisLabel: {
+                textStyle: {
+                    color: '#999',
+                    fontSize: 5
+                }
+            },
+            offset: -5,
+            splitLine: {
+                lineStyle: {
+                    type: 'dotted'
+                }
+            }
+        },
+        series: [
+        {
+            type: 'bar',
+            itemStyle: seriesStyle,
+            label: {
+                show: true,
+                fontSize: 5,
+                position: 'top',
+            },
+            barWidth: 25,
+            data: []
+        }]
+    };
+
+    function rand() {
+        var data = []
+        for (var index = 0; index < 24; index++) {
+            data.push(Math.floor(Math.random() * 20))
+        }
+        return data
+    }
+
+    var e0 = echarts.init(document.getElementById("op0"))
+    var op0 = option
+    op0.title.text = "外部电/气逐时供给"
+    op0.series[0].data = rand()
+    e0.setOption(op0)
+
+    var e1 = echarts.init(document.getElementById("op1"))
+    var op1 = option
+    op1.title.text = "1号能源站逐时出力"
+    op1.series[0].data = rand()
+    e1.setOption(op1)
+
+    var e2 = echarts.init(document.getElementById("op2"))
+    var op2 = option
+    op2.title.text = "2号能源站逐时出力"
+    op2.series[0].data = rand()
+    e2.setOption(op2)
+
+    var e3 = echarts.init(document.getElementById("op3"))
+    var op3 = option
+    op3.title.text = "3号能源站逐时出力"
+    op3.series[0].data = rand()
+    e3.setOption(op3)
+
+</script>
+
 </html>
