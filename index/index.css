@@ -123,6 +123,7 @@
 
 table {
     border-collapse:collapse;
+    height: 25vh;
 }
 .table-title {
     color: #196b5c;
