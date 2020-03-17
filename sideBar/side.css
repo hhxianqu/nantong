@@ -3,8 +3,9 @@ body {
 }
 .header {
     height: 10vh;
-    background:rgba(255,255,255,1);
-    box-shadow:0px 2px 10px 0px rgba(190,204,215,0.39);
+    background-color: rgb(2,83,74);
+    border-bottom: 1px solid white;
+    /* box-shadow:0px 2px 10px 0px rgba(8,102,85, 0.6); */
 }
 
 .chart {
@@ -13,16 +14,15 @@ body {
 }
 
 .bg-green {
-    background-color: rgb(8,102,85) ;
+    background-color: rgb(2,83,74) ;
     width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contain {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-.bg-chart {
-
 }
