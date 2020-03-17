@@ -17,8 +17,14 @@
 .title-L {
     text-align: left;
 }
+.title-scale {
+	width: 30vw;
+	margin-left: 7.5vw;
+   /* text-align: right;*/
+	transform: scaleX(1.5);
+}
 .title-R {
-    text-align: right;
+	text-align: right;
 }
 .title-M {
     text-align: center;
@@ -73,7 +79,7 @@
 .containM {
     display: flex;
     flex-direction: row;
-    margin: 0 4vw;
+    margin: 0 3.5vw;
 }
 
 .left {
@@ -126,16 +132,11 @@
 table {
     border-collapse:collapse;
     height: 25vh;
-    width: 20vw;
+    width: 22vw;
     margin: auto;
 }
 
-.table-title {
-    color: #196b5c;
-    font-size: 12px;
-    transform: scale(0.8);
-    border-bottom: 1px solid #196b5c;
-}
+
 tr td {
     font-size: 12px;
     transform: scale(0.6);
@@ -144,6 +145,11 @@ tr td {
 }
 tr:last-child td {
     border-bottom: 1px solid #000;
+}
+.table-title {
+    color: #196b5c;
+    font-size: 12px;
+    border-bottom: 1px solid #196b5c;
 }
 .card-R {
     width: 35vw;

@@ -11,6 +11,9 @@
             height: 100vh;
             background: url("backgroundR.jpg");
             background-size: 100% 100%;
+			overflow: scroll;
+			overflow-x: hidden;
+			overflow-y: hidden;
         }
 
         .image {
@@ -18,17 +21,22 @@
         }
 
         .width-R {
-            width: 25vw;
+            width: 30vw;
+			margin-left: 1vw;
         }
+		.image-R {
+			width: 35vw;
+			height: 11vh;
+		}
     </style>
 </head>
 
 <body>
-    <div class="title title-L">能源站规划</div>
+    <div class="title title-L title-scale">能源站规划</div>
     <div class="card card-R">
         <div>
         <img src="6.png" class="image width-R" />
-        <img src="text-4.png" /></div>
+        <img src="text-4.png" class="image-R" /></div>
     </div>
     <div class="card card-R">
         <div id="jyzr" class="proposalChart2 width-R"></div>
@@ -37,12 +45,11 @@
         <div class="table-div width-R">
         <table>
             <tr>
-                <th class="table-title">设备名称</th>
-                <th class="table-title">主要参数</th>
-                <th class="table-title">总数</th>
-                <th class="table-title">品牌</th>
+                <td class="table-title">设备名称</td>
+                <td class="table-title">主要参数</td>
+                <td class="table-title">总数</td>
+                <td class="table-title">品牌</td>
             </tr>
-            <tbody>
                 <tr>
                     <td>离心冷水机</td>
                     <td>制冷量8790kW</td>
@@ -97,7 +104,7 @@
                     <td>1</td>
                     <td>DE</td>
                 </tr>
-            </tbody>
+     
         </table>
         </div>
     </div>
