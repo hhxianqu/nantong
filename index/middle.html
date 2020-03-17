@@ -52,7 +52,7 @@
         </div>
         <div class="middle">
             <div class="title title-M">南通中央创新区</div>
-            <button class="btn"></button>
+            <button class="btn" onclick="turn()"></button>
         </div>
         <div class="right">
             <div class="title title-R">金鹰世界</div>
@@ -79,7 +79,13 @@
         window.open('left.html', 'left');
         window.open('right.html', 'right');
     }
-
+	
+	function turn(){
+	window.location.href = "http://139.9.136.207:18080/%E4%B8%AD%E5%88%9B%E5%8C%BA%E4%BB%BF%E7%9C%9F_IFRAME.html?tag=displays/%E4%B8%AD%E5%88%9B%E5%8C%BA%E4%BB%BF%E7%9C%9F/%E5%88%9B%E6%8A%95%E4%BB%BF%E7%9C%9F.json";
+		window.open('left.html?1', 'left');
+        window.open('right.html?1', 'right');
+	}
+	
     var titleStyle = {
         fontSize: 6,
         fontWeight: 400,

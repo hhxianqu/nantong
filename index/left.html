@@ -54,6 +54,13 @@
 <script type="text/javascript" src="echarts.min.js"></script>
 <script type="text/javascript" src="echarts-gl.js"></script>
 <script type="text/javascript">
+window.onload = function() {
+		let i = window.location.href.split("?")[1];
+		if(parseInt(i) === 1){
+			window.open('../sidebar/sideLeft.html', 'left');
+		}
+	}
+
     var titleStyle = {
         fontSize: 6,
         fontWeight: 400,

@@ -112,6 +112,15 @@
 <script type="text/javascript" src="echarts.min.js"></script>
 <script type="text/javascript" src="echarts-gl.js"></script>
 <script type="text/javascript">
+	window.onload = function() {
+	console.log("here");
+		let i = window.location.href.split("?")[1];
+		console.log(i);
+		if(parseInt(i) === 1){
+			window.open('../sidebar/sideRight.html', 'right');
+		}
+	}
+
     let jyzr_json = JSON.parse('{"name": "jyzr", "time": [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0, 17.0, 18.0, 19.0, 20.0, 21.0, 22.0, 23.0, 24.0], "fuhe": [2.72, 2.7, 2.62, 2.62, 2.5, 2.4, 6.14, 18.63, 19.84, 16.35, 10.29, 9.62, 6.33, 7.53, 10.29, 12.05, 13.49, 15.4, 13.88, 12.77, 16.05, 4.73, 2.51, 2.51]}');
     var jyzr = echarts.init(document.getElementById("jyzr"));
     var option_jyzr = {
