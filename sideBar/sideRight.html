@@ -49,16 +49,26 @@
             left: 'center',
             textStyle: titleStyle
         },
+        color: ['#2A7E74', '#6FD3C8','#C6EFE5'],
+        legend: {
+            data: ['电负荷(MW)', '冷负荷(MW)', '热负荷(MW)'],
+            bottom: 5,
+            itemHeight: 5,
+            textStyle:{
+                fontSize: 5,
+            } 
+        },
         grid: {
             top: '20%',
             bottom: '20%',
         },
         xAxis: {
+            type: 'category',
             data: time,
             axisLabel: {
                 textStyle: {
                     color: 'rgba(0,0,0,0.65)',
-                    fontSize: 7,
+                    fontSize: 5,
                 }
             },
             axisTick: {
@@ -67,7 +77,7 @@
             axisLine: {
                 show: false
             },
-            z: 10
+            offset: -5
         },
         yAxis: {
             axisLine: {
@@ -79,7 +89,7 @@
             axisLabel: {
                 textStyle: {
                     color: '#999',
-                    fontSize: 10
+                    fontSize: 5
                 }
             },
             offset: -5,
@@ -87,7 +97,8 @@
                 lineStyle: {
                     type: 'dotted'
                 }
-            }
+            },
+            max: 30
         },
         series: [
         {
@@ -96,17 +107,18 @@
             label: {
                 show: true,
                 fontSize: 7,
-                position: 'top',
+                position: 'center',
             },
             barWidth: 10,
             data: []
         }]
     };
+    
 
     function rand() {
         var data = []
         for (var index = 0; index < 24; index++) {
-            data.push(Math.floor(Math.random() * 20))
+            data.push(Math.floor(Math.random() * 15))
         }
         return data
     }
@@ -120,7 +132,26 @@
     var e1 = echarts.init(document.getElementById("op1"))
     var op1 = option
     op1.title.text = "1号能源站逐时出力"
-    op1.series[0].data = rand()
+    op1.series = [
+        {
+            name: '电负荷(MW)',
+            type: 'bar',
+            stack: 'MW',
+            data: rand()
+        },
+        {
+            name: '冷负荷(MW)',
+            type: 'bar',
+            stack: 'MW',
+            data: rand()
+        },
+        {
+            name: '热负荷(MW)',
+            type: 'bar',
+            stack: 'MW',
+            data: rand()
+        },
+    ]
     e1.setOption(op1)
 
     var e2 = echarts.init(document.getElementById("op2"))
