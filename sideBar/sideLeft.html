@@ -24,8 +24,9 @@
     <script type="text/javascript" src="../index/echarts.min.js"></script>
     <script type="text/javascript" src="../index/echarts-gl.js"></script>
     <script type="text/javascript">
+		
 		function ret() {
-			window.open("../index/middle.html", 'http://139.9.136.207:18080/%E4%B8%AD%E5%88%9B%E5%8C%BA%E4%BB%BF%E7%9C%9F_IFRAME.html?tag=displays/%E4%B8%AD%E5%88%9B%E5%8C%BA%E4%BB%BF%E7%9C%9F/%E5%88%9B%E6%8A%95%E4%BB%BF%E7%9C%9F.json');
+			window.open("../index/middle.html", 'http://127.0.0.1:18080/%E4%B8%AD%E5%88%9B%E5%8C%BA%E4%BB%BF%E7%9C%9F_IFRAME.html?tag=displays/%E4%B8%AD%E5%88%9B%E5%8C%BA%E4%BB%BF%E7%9C%9F/%E5%88%9B%E6%8A%95%E4%BB%BF%E7%9C%9F.json');
 		}
 	
         var titleStyle = {
@@ -53,7 +54,7 @@
                 bottom: '20%',
             },
             xAxis: {
-                data: ["1", "2", "3", "4","5","6"],
+                data: ["9","10", "11", "12", "1","2"],
                 axisLabel: {
                     textStyle: {
                         color: 'rgba(0,0,0,0.65)',
@@ -102,29 +103,29 @@
         var chart1 = echarts.init(document.getElementById("chart1"));
         var option1 = option;
         option1.title.text = "逐月购能费用/万元";
-        option1.series[0].data = [14651.25,13883.35,14293.75,15694.27,16330.55,17675.75];
+        option1.series[0].data = [814.94,771.29,794.05,871.88,907.22,981.94];
 
         chart1.setOption(option1);
 
         var chart2 = echarts.init(document.getElementById("chart2"));
         var option2 = option;
         option2.title.text = "逐月节省费用/万元";
-        option2.series[0].data = [1965.09,1875.25,1925.52,2117.64,2190.09,2377.17]
+        option2.series[0].data = [218.33,208.57,213.88,235.29,243.25,264.13]
     ;
 
         chart2.setOption(option2);
 
         var chart3 = echarts.init(document.getElementById("chart3"));
         var option3 = option;
-        option3.title.text = "能效性(%)";
-        option3.series[0].data = [77.53,78.50,80.18,79.18,80.25,75.28];
+        option3.title.text = "能效性";
+        option3.series[0].data = [1.35,1.38,1.43,1.39,1.43,1.29];
 
         chart3.setOption(option3);
 
         var chart4 = echarts.init(document.getElementById("chart4"));
         var option4 = option;
         option4.title.text = "CO2减排量(t)";
-        option4.series[0].data = [5290.91,5315.91,6300.05,6214.07,6542.41,8576.88]
+        option4.series[0].data = [5290.91,5315.91,6300.05,6214.07,6542.41,6576.88]
  ;
 
         chart4.setOption(option4);
