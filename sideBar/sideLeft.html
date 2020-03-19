@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../index/echarts.min.js"></script>
     <script type="text/javascript" src="../index/echarts-gl.js"></script>
     <script type="text/javascript">
-		
+
 		function ret() {
 			window.open("../index/middle.html", 'http://127.0.0.1:18080/%E4%B8%AD%E5%88%9B%E5%8C%BA%E4%BB%BF%E7%9C%9F_IFRAME.html?tag=displays/%E4%B8%AD%E5%88%9B%E5%8C%BA%E4%BB%BF%E7%9C%9F/%E5%88%9B%E6%8A%95%E4%BB%BF%E7%9C%9F.json');
 		}
@@ -100,34 +100,47 @@
                 barWidth: 25,
 			}]
         };
-        var chart1 = echarts.init(document.getElementById("chart1"));
-        var option1 = option;
-        option1.title.text = "逐月购能费用/万元";
-        option1.series[0].data = [814.94,771.29,794.05,871.88,907.22,981.94];
+        
+        var month = new Date().getMonth();
+        var energy = [907.22,981.94,733.35,688.12,705.22,908.25,980.22,1040.8,766.28,771.29,794.05,871.88]
+        var save = [243.25,264.13,212.82,196.38,201.25,258.66,279.26,296.54,218.33,208.57,213.88,235.29]
+        var efficiency = [2.15,2.21,1.88,1.56,1.63,2.76,3.48,3.3,2.91,2.25,,2.21,2.13]
+        var reduceEm = [6542.41,6576.88,5755.9,4812.83,4933.25,6678.12,7310.18,7233.15,5290.91,5315.91,6300.05,6214.07]
 
+        function getData(arr) {
+            var result = [];
+            for (var i = month - 6; i < month; i ++) {
+                if (i < 0) {
+                    result.push(arr[i + 12]);
+                } else {
+                    result.push(arr[i]);
+                }
+            }
+            return result;
+        }
+
+        var chart1 = echarts.init(document.getElementById("chart1"));
+        var option1 = JSON.parse(JSON.stringify(option));
+        option1.title.text = "逐月购能费用/万元";
+        option1.series[0].data = getData(energy);
         chart1.setOption(option1);
 
         var chart2 = echarts.init(document.getElementById("chart2"));
-        var option2 = option;
+        var option2 = JSON.parse(JSON.stringify(option));
         option2.title.text = "逐月节省费用/万元";
-        option2.series[0].data = [218.33,208.57,213.88,235.29,243.25,264.13]
-    ;
-
+        option2.series[0].data = getData(save);
         chart2.setOption(option2);
 
         var chart3 = echarts.init(document.getElementById("chart3"));
-        var option3 = option;
+        var option3 = JSON.parse(JSON.stringify(option));
         option3.title.text = "能效性";
-        option3.series[0].data = [1.35,1.38,1.43,1.39,1.43,1.29];
-
+        option3.series[0].data = getData(efficiency);
         chart3.setOption(option3);
 
         var chart4 = echarts.init(document.getElementById("chart4"));
-        var option4 = option;
+        var option4 = JSON.parse(JSON.stringify(option));
         option4.title.text = "CO2减排量(t)";
-        option4.series[0].data = [5290.91,5315.91,6300.05,6214.07,6542.41,6576.88]
- ;
-
+        option4.series[0].data = getData(reduceEm);
         chart4.setOption(option4);
     </script>
 </html>
