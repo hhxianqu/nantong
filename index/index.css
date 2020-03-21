@@ -60,7 +60,7 @@
     width: 15vw;
     height: 12vh;
     background-color: white;
-    margin: 8px 2vw;
+    margin: 8px 1vw;
 }
 .proposalChart {
     width: 15vw;
@@ -159,4 +159,12 @@ tr td {
 
 .text-image {
     margin-left: 0.8vw;
+}
+.sub-title {
+    color: white;
+    margin-left: 1vw;
+    width: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
