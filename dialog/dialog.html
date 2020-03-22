@@ -43,7 +43,7 @@
             </div>
             <div class="dialog-middle">
                 <div class="dr-top">
-                    <img src="theme.png" class="dr-img">
+                    <img src="dialog.svg" class="dr-img">
                 </div>
                 <div class="dr-bottom">
                     <div class="chart" id="chart4"></div>
@@ -165,7 +165,7 @@
 
         var chart6 = echarts.init(document.getElementById("chart6"));
         var option6 = JSON.parse(JSON.stringify(option));
-        option6.title.text = "单位碳排放";
+        option6.title.text = "单位碳排放（吨/万元GDP）";
         option6.series[0].data = [18.94,16.21,13.71];
         chart6.setOption(option6);
 
