@@ -58,9 +58,10 @@
 }
 .proposal {
     width: 15vw;
-    height: 12vh;
+    height: 15vh;
+    transform: scaleY(0.8);
     background-color: white;
-    margin: 8px 1vw;
+    margin: -5px 1vw;
 }
 .proposalChart {
     width: 15vw;
