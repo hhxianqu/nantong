@@ -9,26 +9,27 @@
                 background-color: rgba(231, 236, 235, 1);
                 box-shadow:0px 2px 12px 0px rgba(1,82,73,0.3);
                 border-radius:20px;
-                width: 60vw;
+                width: 99vw;
             }
             .dialog-left {
                 display: flex;
                 flex-direction: column;
             }
             .chart {
-                width: 15vw;
-                height: 20vh;
+                width: 24.8vw;
+                height: 32.3vh;
             }
             .dr-top {
                 width: 30vw;
                 height: 40vh;
             }
             .dr-img {
-                height: 30vh;
-                margin-top: 5vh;
-                margin-left: 6vw;
+                height: 50vh;
+                margin-top: 10vh;
+                margin-left: 10vw;
             }
             .dr-bottom {
+				margin-top: 24.7vh;
                 display: flex;
                 flex-direction: row;
             }
@@ -136,7 +137,7 @@
         var chart1 = echarts.init(document.getElementById("chart1"));
         var option1 = JSON.parse(JSON.stringify(option));
         option1.title.text = "投资回收期（年）";
-        option1.series[0].data = [13.71, 7.22, 8.19];
+        option1.series[0].data = [13.71, 7.22, 7.45];
         chart1.setOption(option1);
 
         var chart2 = echarts.init(document.getElementById("chart2"));
