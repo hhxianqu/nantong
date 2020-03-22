@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dialog</title>
+        <style>
+            .dialog-contain {
+                display: flex;
+                flex-direction: row;
+            }
+            .dialog-left {
+                display: flex;
+                flex-direction: column;
+            }
+            .chart {
+                width: 20vw;
+                height: 20vh;
+            }
+            .dr-top {
+                width: 40vw;
+                height: 40vh;
+            }
+            .dr-img {
+                height: 30vh;
+                margin-top: 5vh;
+                margin-left: 10vw;
+            }
+            .dr-bottom {
+                display: flex;
+                flex-direction: row;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="dialog-contain">
+            <div class="dialog-left">
+                <div class="chart" id="chart1"></div>
+                <div class="chart" id="chart2"></div>
+                <div class="chart" id="chart3"></div>
+            </div>
+            <div class="dialog-right">
+                <div class="dr-top">
+                    <img src="theme.png" class="dr-img">
+                </div>
+                <div class="dr-bottom">
+                    <div class="chart" id="chart4"></div>
+                    <div class="chart" id="chart5"></div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="../index/echarts.min.js"></script>
+    <script type="text/javascript" src="../index/echarts-gl.js"></script>
+    <script type="text/javascript">
+
+        var titleStyle = {
+            fontSize: 10,
+            fontWeight: 400,
+            color: 'rgba(0,0,0,0.65)'
+        }
+        var seriesStyle = {
+            color: new echarts.graphic.LinearGradient(
+                0, 0, 0, 1,
+                [
+                    { offset: 0, color: '#2AD991' },
+                    { offset: 1, color: '#00C3B5' }
+                ]
+            )
+        }
+        var option = {
+            title: {
+                text: '',
+                left: 'center',
+                textStyle: titleStyle
+            },
+            grid: {
+                top: '20%',
+                bottom: '20%',
+            },
+            xAxis: {
+                data: ["9","10", "11", "12", "1","2"],
+                axisLabel: {
+                    textStyle: {
+                        color: 'rgba(0,0,0,0.65)',
+                        fontSize: 7,
+                    }
+                },
+                axisTick: {
+                    show: false
+                },
+                axisLine: {
+                    show: false
+                },
+                z: 10
+            },
+            yAxis: {
+                axisLine: {
+                    show: false
+                },
+                axisTick: {
+                    show: false,
+                },
+                axisLabel: {
+                    textStyle: {
+                        color: '#999',
+                        fontSize: 10
+                    }
+                },
+                offset: -5,
+                splitLine: {
+                    lineStyle: {
+                        type: 'dotted'
+                    }
+                }
+            },
+			series: [{
+				type: 'bar',
+                itemStyle: seriesStyle,
+                label: {
+                    show: true,
+                    fontSize: 7,
+                    position: 'top',
+                },
+                barWidth: 20,
+			}]
+        };
+        
+        var month = new Date().getMonth();
+        var energy = [907.22,981.94,733.35,688.12,705.22,908.25,980.22,1040.8,766.28,771.29,794.05,871.88]
+        var save = [243.25,264.13,212.82,196.38,201.25,258.66,279.26,296.54,218.33,208.57,213.88,235.29]
+        var efficiency = [2.15,2.21,1.88,1.56,1.63,2.76,3.48,3.3,2.91,2.25,2.21,2.13]
+        var reduceEm = [6542.41,6576.88,5755.9,4812.83,4933.25,6678.12,7310.18,7233.15,5290.91,5315.91,6300.05,6214.07]
+
+        function getData(arr) {
+            var result = [];
+            for (var i = month - 6; i < month; i ++) {
+                if (i < 0) {
+                    result.push(arr[i + 12]);
+                } else {
+                    result.push(arr[i]);
+                }
+            }
+            return result;
+        }
+
+        var chart1 = echarts.init(document.getElementById("chart1"));
+        var option1 = JSON.parse(JSON.stringify(option));
+        option1.title.text = "逐月购能费用/万元";
+        option1.series[0].data = getData(energy);
+        chart1.setOption(option1);
+
+        var chart2 = echarts.init(document.getElementById("chart2"));
+        var option2 = JSON.parse(JSON.stringify(option));
+        option2.title.text = "逐月节省费用/万元";
+        option2.series[0].data = getData(save);
+        chart2.setOption(option2);
+
+        var chart3 = echarts.init(document.getElementById("chart3"));
+        var option3 = JSON.parse(JSON.stringify(option));
+        option3.title.text = "能效性";
+        option3.series[0].data = getData(efficiency);
+        chart3.setOption(option3);
+
+        var chart4 = echarts.init(document.getElementById("chart4"));
+        chart4.setOption(option3);
+
+        var chart5 = echarts.init(document.getElementById("chart5"));
+        chart5.setOption(option3);
+
+  </script>
+</html>
