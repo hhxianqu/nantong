@@ -2,145 +2,89 @@
 <html>
     <head>
         <title>SideLeft</title>
-        <link rel="stylesheet" type="text/css" href="side.css" />
         <style>
-            
+            body {
+                background: url('backgroundL.jpg');
+                background-size: 100% 100%;
+                margin: 0;
+                height: 100vh;
+                width: 100vw;
+                display: flex;
+                justify-content: flex-end;
+            }
+            .contain {
+                width: 60vw;
+                height: 85vh;
+                margin-top: 10vh;
+                margin-right: 5vw;
+                border: 5px solid;
+                border-image: linear-gradient(180deg,rgba(44,131,161,0.15),rgba(34,164,255,1),rgba(44,131,161,0.15)) 0 100 0;
+                background: linear-gradient(rgba(17, 20, 62, 0.74), rgba(10, 13, 58, 0.46));
+            }
+            .card {
+                margin: 2vh 2vw;
+                border-radius:11px;
+                background:rgba(255,255,255,0.15);
+            }
+            .card img {
+                width: 55vw;
+            }
+            .title {
+                text-align: center;
+                font-size:24px;
+                font-family:PingFangSC-Medium,PingFang SC;
+                font-weight:500;
+                color:rgba(255,255,255,1);
+                line-height:33px;
+                letter-spacing: 1px;
+            }
+            .table {
+                display: flex;
+                flex-direction: row;
+                color:rgba(255,255,255,1);
+                line-height:25px;
+            }
+            .tb-colmun {
+                width: 20vw;
+                padding: 2vw;
+            }
+            .tr {
+                font-size: 12px;
+            }
         </style>
     </head>
     <body>
-        <div class="header"></div>
         <div class="contain">
-            <div class="bg-green">
-                <img src="timg.jpeg"/>
+            <div class="title">科创文卫典型场景--科创小镇</div>
+            <div class="card">
+                <img src="proposal3.svg">
             </div>
-            <div class="bg-chart">
-                <div class="chart" id="chart1"></div>
-                <div class="chart" id="chart2"></div>
-                <div class="chart" id="chart3"></div>
-                <div class="chart" id="chart4"></div>
+            <div class="card">
+                <div class="table">
+                    <div class="tb-colmun">
+                        <div class="th">社会效益</div>
+                        <div class="tr">日均CO2减排：</div>
+                        <div class="tr">社会新增GDP：</div>
+                    </div>
+                    <div class="tb-colmun">
+                        <div class="th">用户效益</div>
+                        <div class="tr">日均节省费用：</div>
+                        <div class="tr">项目投资回报率：</div>
+                    </div>
+                    <div class="tb-colmun">
+                        <div class="th">公司效益</div>
+                        <div class="tr">能源管理收益：</div>
+                        <div class="tr">代维代管收益：</div>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
-    <script type="text/javascript" src="../index/echarts.min.js"></script>
-    <script type="text/javascript" src="../index/echarts-gl.js"></script>
     <script type="text/javascript">
 
 		function ret() {
 			window.open("../index/middle.html", 'http://127.0.0.1:18080/%E4%B8%AD%E5%88%9B%E5%8C%BA%E4%BB%BF%E7%9C%9F_IFRAME.html?tag=displays/%E4%B8%AD%E5%88%9B%E5%8C%BA%E4%BB%BF%E7%9C%9F/%E5%88%9B%E6%8A%95%E4%BB%BF%E7%9C%9F.json');
 		}
-	
-        var titleStyle = {
-            fontSize: 10,
-            fontWeight: 400,
-            color: 'rgba(0,0,0,0.65)'
-        }
-        var seriesStyle = {
-            color: new echarts.graphic.LinearGradient(
-                0, 0, 0, 1,
-                [
-                    { offset: 0, color: '#2AD991' },
-                    { offset: 1, color: '#00C3B5' }
-                ]
-            )
-        }
-        var option = {
-            title: {
-                text: '',
-                left: 'center',
-                textStyle: titleStyle
-            },
-            grid: {
-                top: '20%',
-                bottom: '20%',
-            },
-            xAxis: {
-                data: ["9","10", "11", "12", "1","2"],
-                axisLabel: {
-                    textStyle: {
-                        color: 'rgba(0,0,0,0.65)',
-                        fontSize: 7,
-                    }
-                },
-                axisTick: {
-                    show: false
-                },
-                axisLine: {
-                    show: false
-                },
-                z: 10
-            },
-            yAxis: {
-                axisLine: {
-                    show: false
-                },
-                axisTick: {
-                    show: false,
-                },
-                axisLabel: {
-                    textStyle: {
-                        color: '#999',
-                        fontSize: 10
-                    }
-                },
-                offset: -5,
-                splitLine: {
-                    lineStyle: {
-                        type: 'dotted'
-                    }
-                }
-            },
-			series: [{
-				type: 'bar',
-                itemStyle: seriesStyle,
-                label: {
-                    show: true,
-                    fontSize: 7,
-                    position: 'top',
-                },
-                barWidth: 25,
-			}]
-        };
-        
-        var month = new Date().getMonth();
-        var energy = [907.22,981.94,733.35,688.12,705.22,908.25,980.22,1040.8,766.28,771.29,794.05,871.88]
-        var save = [243.25,264.13,212.82,196.38,201.25,258.66,279.26,296.54,218.33,208.57,213.88,235.29]
-        var efficiency = [2.15,2.21,1.88,1.56,1.63,2.76,3.48,3.3,2.91,2.25,2.21,2.13]
-        var reduceEm = [6542.41,6576.88,5755.9,4812.83,4933.25,6678.12,7310.18,7233.15,5290.91,5315.91,6300.05,6214.07]
 
-        function getData(arr) {
-            var result = [];
-            for (var i = month - 6; i < month; i ++) {
-                if (i < 0) {
-                    result.push(arr[i + 12]);
-                } else {
-                    result.push(arr[i]);
-                }
-            }
-            return result;
-        }
-
-        var chart1 = echarts.init(document.getElementById("chart1"));
-        var option1 = JSON.parse(JSON.stringify(option));
-        option1.title.text = "逐月购能费用/万元";
-        option1.series[0].data = getData(energy);
-        chart1.setOption(option1);
-
-        var chart2 = echarts.init(document.getElementById("chart2"));
-        var option2 = JSON.parse(JSON.stringify(option));
-        option2.title.text = "逐月节省费用/万元";
-        option2.series[0].data = getData(save);
-        chart2.setOption(option2);
-
-        var chart3 = echarts.init(document.getElementById("chart3"));
-        var option3 = JSON.parse(JSON.stringify(option));
-        option3.title.text = "能效性";
-        option3.series[0].data = getData(efficiency);
-        chart3.setOption(option3);
-
-        var chart4 = echarts.init(document.getElementById("chart4"));
-        var option4 = JSON.parse(JSON.stringify(option));
-        option4.title.text = "CO2减排量(t)";
-        option4.series[0].data = getData(reduceEm);
-        chart4.setOption(option4);
     </script>
 </html>
