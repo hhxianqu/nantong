@@ -6,22 +6,25 @@
             .dialog-contain {
                 display: flex;
                 flex-direction: row;
-                background-color: rgba(231, 236, 235, 1);
+                background-color: rgba(2, 19, 53, 1);
                 box-shadow:0px 2px 12px 0px rgba(1,82,73,0.3);
                 border-radius:20px;
                 width: 99vw;
             }
-            .dialog-left {
-                display: flex;
-                flex-direction: column;
-            }
             .chart {
-                width: 24.8vw;
-                height: 32.3vh;
+                width: 22vw;
+                height: 30vh;
+                margin: 10px;
+                background:linear-gradient(180deg,rgba(82,255,234,0.11) 0%,rgba(32,160,255,0.1) 100%);
+                box-shadow:0px 0px 8px 0px rgba(29,160,160,0.54);
+                border-radius:8px;
+                opacity:0.8;
+                border:1px solid;
+                border-image:linear-gradient(180deg, rgba(82,255,234,0.37), rgba(32,160,255,0.38)) 1 1;
             }
             .dr-top {
                 width: 30vw;
-                height: 40vh;
+                height: 39vh;
             }
             .dr-img {
                 height: 50vh;
@@ -63,16 +66,16 @@
     <script type="text/javascript">
 
         var titleStyle = {
-            fontSize: 10,
+            fontSize: 14,
             fontWeight: 400,
-            color: 'rgba(0,0,0,0.65)'
+            color: 'rgba(255, 255, 255, 0.85)'
         }
         var seriesStyle = {
             color: new echarts.graphic.LinearGradient(
                 0, 0, 0, 1,
                 [
-                    { offset: 0, color: '#2AD991' },
-                    { offset: 1, color: '#00C3B5' }
+                    { offset: 0, color: '#52FFEA' },
+                    { offset: 1, color: '#20A0FF' }
                 ]
             )
         }
@@ -90,8 +93,8 @@
                 data: ["方案一", "方案二", "方案三"],
                 axisLabel: {
                     textStyle: {
-                        color: 'rgba(0,0,0,0.65)',
-                        fontSize: 7,
+                        color: 'rgba(255, 255, 255, 0.85)',
+                        fontSize: 10,
                     }
                 },
                 axisTick: {
@@ -111,8 +114,8 @@
                 },
                 axisLabel: {
                     textStyle: {
-                        color: '#999',
-                        fontSize: 10
+                        color: 'rgba(255, 255, 255, 0.85)',
+                        fontSize: 12
                     }
                 },
                 offset: -5,
