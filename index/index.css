@@ -58,13 +58,13 @@
 }
 .proposal {
     width: 15vw;
-    height: 12vh;
+    height: 16vh;
     background-color: white;
     margin: 8px 1vw;
 }
 .proposalChart {
     width: 15vw;
-    height: 12vh;
+    height: 16vh;
     margin: 8px;
     background-color: white;
 }

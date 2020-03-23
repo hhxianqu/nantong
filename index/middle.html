@@ -45,10 +45,6 @@
                 <div id="kc3_r" class="proposalChart"></div>
                 <div id="kc3_l" class="proposalChart"></div>
             </div>
-            <div class="card card-L">
-                <div id="proposal1" class="proposalChart"></div>
-                <div id="proposal2" class="proposalChart"></div>
-            </div>
         </div>
         <div class="middle">
             <div class="title title-M">南通中央创新区</div>
@@ -100,92 +96,7 @@
             ]
         )
     }
-    var option = {
-        title: {
-            text: '',
-            left: 'center',
-            textStyle: titleStyle
-        },
-        grid: {
-            top: '20%',
-            bottom: '20%',
-        },
-        xAxis: {
-            data: ["方案一", "方案二", "方案三"],
-            axisLabel: {
-                textStyle: {
-                    color: 'rgba(0,0,0,0.65)',
-                    fontSize: 5,
-                }
-            },
-            axisTick: {
-                show: false
-            },
-            axisLine: {
-                show: false
-            },
-            z: 10
-        },
-        yAxis: {
-            axisLine: {
-                show: false
-            },
-            axisTick: {
-                show: false,
-            },
-            axisLabel: {
-                textStyle: {
-                    color: '#999',
-                    fontSize: 5
-                }
-            },
-            offset: -5,
-            splitLine: {
-                lineStyle: {
-                    type: 'dotted'
-                }
-            }
-        }
-    };
-
-    var proposal1 = echarts.init(document.getElementById("proposal1"));
-    var option1 = option;
-    option1.title.text = "投资回收期/年";
-    option1.series = [
-        {
-            type: 'bar',
-            itemStyle: seriesStyle,
-            label: {
-                show: true,
-                fontSize: 5,
-                position: 'top',
-            },
-            barWidth: 25,
-            data: [6.85, 4.45, 8.89]
-        }
-    ];
-
-    proposal1.setOption(option1);
-
-    var proposal2 = echarts.init(document.getElementById("proposal2"));
-    var option2 = option;
-    option2.title.text = "能效比";
-    option1.series = [
-        {
-            type: 'bar',
-            itemStyle: seriesStyle,
-            label: {
-                show: true,
-                fontSize: 5,
-                position: 'top',
-            },
-            barWidth: 25,
-            data: [0.6223, 0.6523, 0.7023]
-        }
-    ];
-
-    proposal2.setOption(option2);
-
+   
     var kc_r = {
         title: {
             text: '',

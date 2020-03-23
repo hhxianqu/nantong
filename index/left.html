@@ -15,6 +15,7 @@
         .image1 {
             margin-left: 5vw;
             width: 28vw;
+            height: 20vh;
         }
         .text-image {
             width: 30vw;
@@ -47,10 +48,6 @@
             <div class="sub-title">耦合式</div>
             <img src="proposal3.svg" class="proposal" />
             <div id="kc3_d" class="proposalChart"></div>
-        </div>
-        <div class="card">
-            <div id="proposal1" class="proposalChart" style="margin-left: 3vw;"></div>
-            <div id="proposal2" class="proposalChart" style="margin-left: 1vw;"></div>
         </div>
     </div>
 </body>
@@ -199,94 +196,6 @@ window.onload = function() {
         }
     ]
     kc3_d.setOption(option_kc3_d);
-
-    var option = {
-        title: {
-            text: '',
-            left: 'center',
-            textStyle: titleStyle
-        },
-        grid: {
-            top: '20%',
-            bottom: '20%',
-        },
-        xAxis: {
-            data: ["方案一", "方案二", "方案三"],
-            axisLabel: {
-                textStyle: {
-                    color: 'rgba(0,0,0,0.65)',
-                    fontSize: 5,
-                }
-            },
-            axisTick: {
-                show: false
-            },
-            axisLine: {
-                show: false
-            },
-            z: 10
-        },
-        yAxis: {
-            axisLine: {
-                show: false
-            },
-            axisTick: {
-                show: false,
-            },
-            axisLabel: {
-                textStyle: {
-                    color: '#999',
-                    fontSize: 5
-                }
-            },
-            offset: -5,
-            splitLine: {
-                lineStyle: {
-                    type: 'dotted'
-                }
-            }
-        }
-    };
-
-
-    var proposal1 = echarts.init(document.getElementById("proposal1"));
-    var option1 = option;
-    option1.title.text = "投资费用/万元";
-    option1.series = [
-        {
-            type: 'bar',
-            itemStyle: seriesStyle,
-            label: {
-                show: true,
-                fontSize: 5,
-                position: 'top',
-            },
-            barWidth: 25,
-            data: [2149.25, 1472.73, 4054.8]
-        }
-    ];
-
-    proposal1.setOption(option1);
-
-    var proposal2 = echarts.init(document.getElementById("proposal2"));
-    var option2 = option;
-    option2.title.text = "年运行成本/万元";
-    option1.series = [
-        {
-            type: 'bar',
-            itemStyle: seriesStyle,
-            label: {
-                show: true,
-                fontSize: 5,
-                position: 'top',
-            },
-            barWidth: 25,
-            data: [8649, 8260.2, 6510]
-        }
-    ];
-
-    proposal2.setOption(option2);
-
 
 </script>
 
