@@ -3,61 +3,147 @@
     <head>
         <title>Dialog</title>
         <style>
+            body {
+                margin: 0;
+                background-color: rgba(2, 19, 53, 1);
+                overflow: scroll;
+                overflow-x: hidden;
+                overflow-y: hidden;
+            }
             .dialog-contain {
                 display: flex;
                 flex-direction: row;
-                background-color: rgba(2, 19, 53, 1);
-                box-shadow:0px 2px 12px 0px rgba(1,82,73,0.3);
-                border-radius:20px;
-                width: 99vw;
+                justify-content: center;
+                width: 99.5vw;
             }
-            .chart {
-                width: 22vw;
+            .card {
                 height: 30vh;
-                margin: 10px;
+                margin-right: 1vw;
+                margin-bottom: 2vh;
                 background:linear-gradient(180deg,rgba(82,255,234,0.11) 0%,rgba(32,160,255,0.1) 100%);
                 box-shadow:0px 0px 8px 0px rgba(29,160,160,0.54);
-                border-radius:8px;
                 opacity:0.8;
                 border:1px solid;
                 border-image:linear-gradient(180deg, rgba(82,255,234,0.37), rgba(32,160,255,0.38)) 1 1;
+            }
+            .chart {
+                width: 18vw;
+            }
+            .card-sum {
+                padding: 0 1.5vw;
+                width: 6vw;
             }
             .dr-top {
                 width: 30vw;
                 height: 39vh;
             }
             .dr-img {
-                height: 50vh;
+                height: 40vh;
                 margin-top: 10vh;
-                margin-left: 10vw;
+                margin-left: 8vw;
             }
             .dr-bottom {
 				margin-top: 24.7vh;
                 display: flex;
                 flex-direction: row;
             }
+            .th {
+                font-size:24px;
+                font-family:PingFangSC-Semibold,PingFang SC;
+                font-weight:600;
+                color:rgba(255,255,255,1);
+                line-height:10vh;
+                letter-spacing:2px;
+                background:linear-gradient(180deg, rgba(82,255,234,1) 0%, rgba(32,160,255,1) 100%);
+                -webkit-background-clip:text;
+                -webkit-text-fill-color:transparent;
+            }
+            .tr {
+                font-size:15px;
+                color:white;
+                letter-spacing:2px;
+                height: 5vh;
+                text-align: center;
+            }
+            .arrow {
+                width: 6vw;
+            }
+            .dialog-right {
+                width: 20vw;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .title-group-item {
+                background:linear-gradient(180deg,rgba(82,255,234,0.17) 0%,rgba(32,160,255,0.16) 100%);
+                border-radius:4px;
+                border:2px solid;
+                border-image:linear-gradient(180deg, rgba(82,255,234,1), rgba(32,160,255,1)) 2 2;
+                font-size:24px;
+                color:rgba(255,255,255,1);
+                line-height:33px;
+                letter-spacing:4px;
+                width: 8vw;
+                text-align: center;
+            }
+            .title-group {
+                width: 10vw;
+                height: 70vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
         </style>
     </head>
     <body>
         <div class="dialog-contain">
+            <div>
+                <div class="card card-sum">
+                    <span class="th">政府</span>
+                    <div class="tr">保障加强</div>
+                    <div class="tr">设施提升</div>
+                    <div class="tr">低碳环保</div>
+                </div>
+                <div class="card card-sum">
+                    <span class="th">用户</span>
+                    <div class="tr">节能降耗</div>
+                    <div class="tr">降低费用</div>
+                    <div class="tr">服务提升</div>
+                </div>
+                <div class="card card-sum">
+                    <span class="th">公司</span>
+                    <div class="tr">电能替代</div>
+                    <div class="tr">削峰填谷</div>
+                    <div class="tr">理念落地</div>
+                </div>
+            </div>
             <div class="dialog-left">
-                <div class="chart" id="chart1"></div>
-                <div class="chart" id="chart2"></div>
-                <div class="chart" id="chart3"></div>
+                <div class="card card chart" id="chart1"></div>
+                <div class="card chart" id="chart2"></div>
+                <div class="card chart" id="chart3"></div>
             </div>
             <div class="dialog-middle">
                 <div class="dr-top">
                     <img src="dialog.svg" class="dr-img">
                 </div>
                 <div class="dr-bottom">
-                    <div class="chart" id="chart4"></div>
-                    <div class="chart" id="chart5"></div>
+                    <div class="card chart" id="chart4"></div>
+                    <div class="card chart" id="chart5"></div>
                 </div>
             </div>
+            <div>
+                <div class="card chart" id="chart6"></div>
+                <div class="card chart" id="chart7"></div>
+                <div class="card chart" id="chart8"></div>
+            </div>
             <div class="dialog-right">
-                <div class="chart" id="chart6"></div>
-                <div class="chart" id="chart7"></div>
-                <div class="chart" id="chart8"></div>
+                <!-- <img src="arrow.svg" class="arrow"> -->
+                <div class="title-group">
+                    <div class="title-group-item">能源流</div>
+                    <div class="title-group-item">信息流</div>
+                    <div class="title-group-item">数据流</div>
+                </div>
             </div>
         </div>
     </body>
