@@ -12,15 +12,22 @@
             background: url("backgroundL.jpg");
             background-size: 100% 100%;
         }
+
         .image1 {
             margin-left: 5vw;
-            width: 28vw;
+            width: 30vw;
             height: 20vh;
         }
+
         .text-image {
-            width: 30vw;
-			height: 8.5vh;
-            margin-left: 5vw;
+            width: 35vw;
+            height: 11vh;
+            /* margin-left: 5vw; */
+        }
+
+        .card-N {
+            justify-content: flex-end;
+            width: 35vw;
         }
     </style>
 </head>
@@ -28,38 +35,52 @@
 <body>
     <div class="contain">
         <div class="title title-R title-scale">科创小镇</div>
-        <div class="card">
+        <div class="card card-N">
             <div class="text" style="height: 32vh;">
                 <img src="1.jpg" class="image image1" />
                 <img src="text-1.png" class="text-image" />
             </div>
         </div>
-        <div class="card">
-            <div class="sub-title">分散式</div>
-            <img src="proposal1.svg" class="proposal" />
-            <div id="kc1_d" class="proposalChart"></div>
+        <div class="card card-N">
+            <div id="kczr" class="proposalChart2" style="width: 30vw;"></div>
         </div>
-        <div class="card">
-            <div class="sub-title">集中式</div>
-            <img src="proposal2.svg" class="proposal" />
-            <div id="kc2_d" class="proposalChart"></div>
-        </div>
-        <div class="card">
-            <div class="sub-title">耦合式</div>
-            <img src="proposal3.svg" class="proposal" />
-            <div id="kc3_d" class="proposalChart"></div>
+        <div class="card card-N">
+            <div class="table-div" style="width: 30vw;">
+                <table>
+                    <tr>
+                        <td>初始投资费用/万元</td>
+                        <td>4054.8</td>
+                    </tr>
+                    <tr>
+                        <td>年运行费用/万元</td>
+                        <td>6510</td>
+                    </tr>
+                    <tr>
+                        <td>投资回收期/年</td>
+                        <td>8.89</td>
+                    </tr>
+                    <tr>
+                        <td>能效比/ %</td>
+                        <td>75</td>
+                    </tr>
+                    <tr>
+                        <td>CO2年减排量/t</td>
+                        <td>110965.94</td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
 </body>
 <script type="text/javascript" src="echarts.min.js"></script>
 <script type="text/javascript" src="echarts-gl.js"></script>
 <script type="text/javascript">
-window.onload = function() {
-		let i = window.location.href.split("?")[1];
-		if(parseInt(i) === 1){
-			window.open('../sidebar/sideLeft.html', 'left');
-		}
-	}
+    window.onload = function () {
+        let i = window.location.href.split("?")[1];
+        if (parseInt(i) === 1) {
+            window.open('../sidebar/sideLeft.html', 'left');
+        }
+    }
 
     var titleStyle = {
         fontSize: 6,
@@ -76,32 +97,38 @@ window.onload = function() {
         )
     }
 
-    var kc_d = {
+    let kczr_json = JSON.parse('{"name": "kczr", "time": [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0, 17.0, 18.0, 19.0, 20.0, 21.0, 22.0, 23.0, 24.0], "fuhe": [36.93, 37.89, 37.2, 36.63, 37.65, 34.41, 34.68, 32.55, 28.32, 26.22, 25.32, 23.16, 21.75, 21.03, 20.79, 22.53, 24.6, 26.34, 28.2, 31.35, 33.15, 34.11, 36.81, 37.98]}');
+    var kczr = echarts.init(document.getElementById("kczr"));
+    var option_kczr = {
         title: {
-            text: '',
+            text: '科创制热',
             left: 'center',
-            textStyle: titleStyle
+            textStyle: {
+                fontSize: 26,
+                // fontWeight: '10%',
+                color: 'rgba(0,0,0,0.65)'
+            }
         },
-        color: ['#64A5C8', '#D4D25C'],
+        color: ['#A5A5A5'],
         legend: {
-            data: ['购电', '其他'],
+            data: ['负荷'],
             bottom: 5,
-            itemHeight: 5,
-            textStyle:{
-                fontSize: 5,
-            } 
+            itemHeight: 10,
+            textStyle: {
+                fontSize: 10,
+            }
         },
         grid: {
-            top: '20%',
-            bottom: '30%',
+            top: '15%',
+            bottom: '20%',
         },
         xAxis: {
             type: 'category',
-            data: [],
+            data: kczr_json.time,
             axisLabel: {
                 textStyle: {
                     color: 'rgba(0,0,0,0.65)',
-                    fontSize: 5,
+                    fontSize: 10,
                 }
             },
             axisTick: {
@@ -122,7 +149,7 @@ window.onload = function() {
             axisLabel: {
                 textStyle: {
                     color: '#999',
-                    fontSize: 5
+                    fontSize: 10
                 }
             },
             offset: -5,
@@ -131,71 +158,17 @@ window.onload = function() {
                     type: 'dotted'
                 }
             }
-        }
-    };
-    let kc1_d_json = JSON.parse('{"name": "kc1_d", "time": [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0, 17.0, 18.0, 19.0, 20.0, 21.0, 22.0, 23.0, 24.0], "goudian": [10.66, 9.63, 8.92, 8.65, 8.28, 8.09, 10.3, 11.06, 12.08, 13.41, 16.07, 16.9, 16.52, 15.93, 15.6, 16.04, 17.26, 18.8, 19.78, 20.66, 19.59, 17.27, 13.79, 11.85], "qita": [2.7, 2.68, 2.58, 2.62, 2.7, 2.62, 3.06, 3.45, 3.73, 3.62, 3.78, 3.75, 3.69, 3.57, 3.39, 3.35, 3.42, 3.31, 3.18, 2.95, 2.82, 2.72, 2.75, 2.49], "fuhe": [7.95, 6.95, 6.34, 6.03, 5.58, 5.48, 7.25, 7.61, 8.36, 9.8, 12.3, 13.16, 12.83, 12.35, 12.21, 12.69, 13.83, 15.49, 16.6, 17.71, 16.77, 14.55, 11.04, 9.37]}');
-    var kc1_d = echarts.init(document.getElementById("kc1_d"));
-    var option_kc1_d = kc_d;
-    option_kc1_d.title.text = "方案一电相关";
-    option_kc1_d.xAxis.data = kc1_d_json.time;
-    option_kc1_d.series = [
-        {
-            name: '购电',
-            type: 'bar',
-            stack: '电相关',
-            data: kc1_d_json.goudian
         },
-        {
-            name: '其他',
-            type: 'bar',
-            stack: '电相关',
-            data: kc1_d_json.qita
-        }
-    ]
-    kc1_d.setOption(option_kc1_d);
-
-
-    let kc2_d_json = JSON.parse('{"name": "kc2_d", "time": [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0, 17.0, 18.0, 19.0, 20.0, 21.0, 22.0, 23.0, 24.0], "goudian": [8.18, 7.19, 6.6, 6.33, 5.92, 6.05, 8.12, 9.03, 10.3, 11.93, 14.53, 15.47, 15.18, 14.8, 14.45, 14.79, 15.82, 17.27, 18.08, 18.64, 17.58, 15.16, 11.54, 9.66], "qita": [0.23, 0.25, 0.26, 0.3, 0.34, 0.57, 0.87, 1.42, 1.94, 2.13, 2.23, 2.32, 2.35, 2.45, 2.24, 2.1, 1.98, 1.77, 1.48, 0.93, 0.81, 0.61, 0.5, 0.29], "fuhe": [7.95, 6.95, 6.34, 6.03, 5.58, 5.48, 7.25, 7.61, 8.36, 9.8, 12.3, 13.16, 12.83, 12.35, 12.21, 12.69, 13.83, 15.49, 16.6, 17.71, 16.77, 14.55, 11.04, 9.37]}');
-    var kc2_d = echarts.init(document.getElementById("kc2_d"));
-    var option_kc2_d = kc_d;
-    option_kc2_d.title.text = "方案二电相关";
-    option_kc2_d.xAxis.data = kc2_d_json.time;
-    option_kc2_d.series = [
-        {
-            name: '购电',
-            type: 'bar',
-            stack: '电相关',
-            data: kc2_d_json.goudian
-        },
-        {
-            name: '其他',
-            type: 'bar',
-            stack: '电相关',
-            data: kc2_d_json.qita
-        }
-    ]
-    kc2_d.setOption(option_kc2_d);
-
-    let kc3_d_json = JSON.parse('{"name": "kc3_d", "time": [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0, 17.0, 18.0, 19.0, 20.0, 21.0, 22.0, 23.0, 24.0], "goudian": [8.66, 7.67, 7.08, 6.8, 6.38, 6.49, 8.51, 9.34, 9.23, 11.58, 14.72, 15.66, 15.36, 14.97, 14.65, 15.01, 16.05, 17.53, 18.38, 19.02, 17.98, 15.59, 11.56, 9.88], "qita": [0.71, 0.72, 0.73, 0.77, 0.8, 1.01, 1.26, 1.73, 0.87, 1.78, 2.43, 2.5, 2.53, 2.61, 2.44, 2.32, 2.21, 2.04, 1.78, 1.31, 1.21, 1.03, 0.51, 0.51], "fuhe": [7.95, 6.95, 6.34, 6.03, 5.58, 5.48, 7.25, 7.61, 8.36, 9.8, 12.3, 13.16, 12.83, 12.35, 12.21, 12.69, 13.83, 15.49, 16.6, 17.71, 16.77, 14.55, 11.04, 9.37]}');
-    var kc3_d = echarts.init(document.getElementById("kc3_d"));
-    var option_kc3_d = kc_d;
-    option_kc3_d.title.text = "方案三电相关";
-    option_kc3_d.xAxis.data = kc3_d_json.time;
-    option_kc3_d.series = [
-        {
-            name: '购电',
-            type: 'bar',
-            stack: '电相关',
-            data: kc3_d_json.goudian
-        },
-        {
-            name: '其他',
-            type: 'bar',
-            stack: '电相关',
-            data: kc3_d_json.qita
-        }
-    ]
-    kc3_d.setOption(option_kc3_d);
+        series: [
+            {
+                name: '负荷',
+                type: 'bar',
+                stack: '负荷',
+                data: kczr_json.fuhe
+            }
+        ]
+    }
+    kczr.setOption(option_kczr);
 
 </script>
 
