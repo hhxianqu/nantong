@@ -160,7 +160,7 @@
             fontSize: 12,
             fontWeight: 400,
             color: 'rgba(255, 255, 255, 0.85)',
-            lineHeight: 0
+            lineHeight: 5
         }
         var seriesStyle = {
             color: new echarts.graphic.LinearGradient(
@@ -182,12 +182,14 @@
                 bottom: '20%',
             },
             xAxis: {
-                data: ["方案一", "方案二", "方案三"],
+                data: ["单一型", "能源站", "区域型"],
                 axisLabel: {
                     textStyle: {
                         color: 'rgba(255, 255, 255, 0.85)',
                         fontSize: 10,
+						
                     }
+					
                 },
                 axisTick: {
                     show: false

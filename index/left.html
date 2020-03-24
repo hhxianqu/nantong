@@ -21,9 +21,8 @@
 
         .text-image {
             width: 35vw;
-            height: 11vh;
-			margin-bottom: 1vh;
-            /* margin-left: 5vw; */
+            height: 10vh;
+			margin-top: 0.5vh;
         }
 
         .card-N {
@@ -37,7 +36,7 @@
     <div class="contain">
         <div class="title title-R title-scale">科创小镇</div>
         <div class="card card-N">
-            <div class="text" style="height: 34.5vh;">
+            <div class="text" style="height: 33.5vh;">
                 <img src="1.jpg" class="image image1" />
                 <img src="text-1.png" class="text-image" />
             </div>
@@ -50,19 +49,19 @@
                 <table>
                     <tr>
                         <td>初始投资费用/万元</td>
-                        <td>4054.8</td>
+                        <td>28054.8</td>
                     </tr>
                     <tr>
                         <td>年运行费用/万元</td>
-                        <td>6510</td>
+                        <td>5510</td>
                     </tr>
                     <tr>
                         <td>投资回收期/年</td>
-                        <td>8.89</td>
+                        <td>7.89</td>
                     </tr>
                     <tr>
                         <td>能效比/ %</td>
-                        <td>75</td>
+                        <td>80</td>
                     </tr>
                     <tr>
                         <td>CO2年减排量/t</td>
@@ -98,7 +97,7 @@
         )
     }
 
-    let kczr_json = JSON.parse('{"name": "kczr", "time": [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0, 17.0, 18.0, 19.0, 20.0, 21.0, 22.0, 23.0, 24.0], "fuhe": [36.93, 37.89, 37.2, 36.63, 37.65, 34.41, 34.68, 32.55, 28.32, 26.22, 25.32, 23.16, 21.75, 21.03, 20.79, 22.53, 24.6, 26.34, 28.2, 31.35, 33.15, 34.11, 36.81, 37.98]}');
+    let kczr_json = JSON.parse('{"name": "kczr", "time": [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0, 17.0, 18.0, 19.0, 20.0, 21.0, 22.0, 23.0, 24.0], "fuhe": [11.75, 11.03, 10.79, 11.53, 14.6, 16.34, 18.2, 21.35, 23.15, 24.11, 26.81, 27.98, 26.93, 27.89, 27.2, 26.63, 27.65, 24.41, 24.68, 22.55, 18.32, 16.22, 15.32, 13.16]}');
     var kczr = echarts.init(document.getElementById("kczr"));
     var option_kczr = {
         title: {
