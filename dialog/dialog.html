@@ -20,6 +20,7 @@
                 height: 30vh;
                 margin-right: 1vw;
                 margin-bottom: 2vh;
+                margin-top: 1vh;
                 background:linear-gradient(180deg,rgba(82,255,234,0.11) 0%,rgba(32,160,255,0.1) 100%);
                 box-shadow:0px 0px 8px 0px rgba(29,160,160,0.54);
                 opacity:0.8;
@@ -27,20 +28,22 @@
                 border-image:linear-gradient(180deg, rgba(82,255,234,0.37), rgba(32,160,255,0.38)) 1 1;
             }
             .chart {
-                width: 18vw;
+                width: 15vw;
+                height: 25vh;
+                padding: 2.5vh 1vw;
             }
             .card-sum {
                 padding: 0 1.5vw;
-                width: 6vw;
+                width: 8vw;
             }
             .dr-top {
                 width: 30vw;
-                height: 39vh;
+                height: 40vh;
             }
             .dr-img {
                 height: 40vh;
                 margin-top: 10vh;
-                margin-left: 8vw;
+                margin-left: 7vw;
             }
             .dr-bottom {
 				margin-top: 24.7vh;
@@ -61,16 +64,15 @@
             .tr {
                 font-size:15px;
                 color:white;
+                font-weight: 500;
                 letter-spacing:2px;
                 height: 5vh;
                 text-align: center;
             }
             .arrow {
-                width: 6vw;
+                width: 30px;
             }
             .dialog-right {
-                width: 20vw;
-                height: 100vh;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -88,11 +90,13 @@
                 text-align: center;
             }
             .title-group {
-                width: 10vw;
+                width:12vw;
                 height: 70vh;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
+                align-items: center;
+                z-index: 100;
             }
         </style>
     </head>
@@ -138,10 +142,11 @@
                 <div class="card chart" id="chart8"></div>
             </div>
             <div class="dialog-right">
-                <!-- <img src="arrow.svg" class="arrow"> -->
                 <div class="title-group">
                     <div class="title-group-item">能源流</div>
+                    <img src="arrow.png" class="arrow">
                     <div class="title-group-item">信息流</div>
+                    <img src="arrow.png" class="arrow">
                     <div class="title-group-item">数据流</div>
                 </div>
             </div>
@@ -220,14 +225,14 @@
                     position: 'top',
                     color: '#fff'
                 },
-                barWidth: 20,
+                barWidth: 18,
 			}]
         };
         
         var chart1 = echarts.init(document.getElementById("chart1"));
         var option1 = JSON.parse(JSON.stringify(option));
         option1.title.text = "投资回收期（年）";
-        option1.series[0].data = [13.71, 7.22, 7.45];
+        option1.series[0].data = [13.71, 7.22, 6.66];
         chart1.setOption(option1);
 
         var chart2 = echarts.init(document.getElementById("chart2"));
